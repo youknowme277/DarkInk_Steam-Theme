@@ -2,33 +2,33 @@
 
 ![DarkInk Theme Preview](assets/preview.png)
 
-A clean, flat obsidian-dark Steam client theme in the **DarkInk** visual identity: deep ink surfaces (`#080b10` / `#0b0f14` / `#121821`), crisp DarkInk Cyan (`#00bfcf`) accents with zero neon glow, a custom unified sidebar navigation rail, and full coverage across all 12 LYTE window targets.
+An original flat obsidian-dark Steam client theme crafted in the **DarkInk** visual identity: official DarkInk inkwell avatar & two-tone `DarkInk` wordmark, deep ink surfaces (`#080b10` / `#0b0f14` / `#121821`), crisp DarkInk Cyan (`#00bfcf`) edge accents with zero neon glow, subtle micro dot-grid canvas, 3 layouts, 4 presets, and full 12-window coverage.
 
 ## Features
 
-- **Custom DarkInk Sidebar Rail Layout:** Unified left navigation rail (`DARKINK` header, Shop / Library / Community / Profile with crisp icons, game list, and docked Downloads / Add Game / Friends footer), top bar search & controls, framed game hero with floating action bar & link pills, and clean 2-column detail cards — switchable back to **Classic Steam Bar** anytime in Options.
-- **Zero Glow, Zero Clutter:** Pure flat obsidian surfaces, subtle `1px` hairline borders, and solid `#00bfcf` accent states.
-- **Full 12-Window Coverage:** Styles `main`, `settings` (including LYTE Settings panels), `friends`, `menus`, `notifications`, `overlay`, `dialogs`, `store`, `community`, and `web`.
-- **4 Built-In Color Presets:**
-  - **DarkInk Classic** — Obsidian `#0b0f14` with DarkInk Cyan (`#00bfcf`)
-  - **DarkInk Abyss (OLED)** — Deep black `#07090d` with DarkInk Cyan (`#00bfcf`)
-  - **DarkInk Violet** — Midnight `#0e0b16` with Violet (`#8b5cf6`)
-  - **DarkInk Crimson** — Dark `#11090c` with Crimson (`#f43f5e`)
-- **21 Live Customization Options:** Preset, Window layout (`DarkInk Sidebar Rail` / `Classic Steam Bar`), all surface & accent colors, corner/cover radius, sidebar width, nav density, shelf style, border strength, cover hover lift, scrollbar style, and hide What's New shelf.
+- **Official DarkInk Branding:** Top-left header featuring the DarkInk inkwell avatar and two-tone **Dark**`Ink` wordmark (`#ffffff` + `#00bfcf`).
+- **3 Window Layouts (`Options → Window layout`):**
+  - **DarkInk Command Rail** *(Default)* — Unified left rail with 2px cyan top accent, vertical navigation, game list, docked footer, top search bar, framed hero & clean 2-column detail cards.
+  - **DarkInk Compact Dock** — Narrower `232px` rail and tighter spacing for high-density libraries.
+  - **DarkInk Top Bar** — Full-width DarkInk top navigation bar with standard sidebar.
+- **2 Active Highlight Styles (`Options → Active highlight style`):**
+  - **DarkInk Tinted Edge** *(Default)* — Deep obsidian-cyan tint, crisp cyan border & `3px` left accent bar.
+  - **Solid Accent Pill** — Bold solid `#00bfcf` fill with dark ink text.
+- **4 Color Presets:** *DarkInk Classic*, *DarkInk Abyss (OLED)*, *DarkInk Violet*, and *DarkInk Crimson*.
+- **Zero Glow, Zero Clutter:** Pure flat surfaces, `1px` hairlines, optional micro dot-grid, and full coverage across all 12 LYTE window targets (`main`, `settings`, `friends`, `menus`, `notifications`, `overlay`, `dialogs`, `store`, `community`, `web`).
 - **100% Self-Contained:** Zero external `@import` rules and zero remote assets.
 
 ## Installation
 
 ### From LYTE Catalog
-1. Open the **DarkInk** card on the LYTE Themes catalog and click **Install** (or paste its 32-character catalog ID into **Steam Settings → LYTE → Themes**).
-2. Toggle **DarkInk** on.
-3. Open **Options** on the theme card to switch presets, layout, or colors live.
+1. Open **DarkInk** on the LYTE Themes catalog and click **Install**.
+2. Toggle **DarkInk** on in **Steam Settings → LYTE → Themes**.
+3. Open **Options** to switch layout, highlight style, preset, or colors live.
 
-### Local Folder (Development / Manual)
+### Local Folder
 1. Clone or download this repository.
-2. Open **Steam Settings → LYTE → Themes** and click **Import folder**.
-3. Select the repository root folder (containing `lyte.catalog.json` and `lyte.theme.json`).
-4. Toggle **DarkInk** on.
+2. Open **Steam Settings → LYTE → Themes → Import folder** and pick the repository root folder.
+3. Toggle **DarkInk** on.
 
 ## License
 

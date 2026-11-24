@@ -33,19 +33,40 @@
       "id": "layout",
       "type": "select",
       "label": "Window layout",
-      "description": "DarkInk custom sidebar rail or standard Steam top bar.",
+      "description": "Choose between DarkInk Command Rail, Compact Dock, or DarkInk Top Bar.",
       "group": "Shape & Layout",
-      "default": "rail",
+      "default": "command",
       "choices": [
-        { "value": "rail", "label": "DarkInk Sidebar Rail" },
-        { "value": "classic", "label": "Classic Steam Bar" }
+        { "value": "command", "label": "DarkInk Command Rail" },
+        { "value": "compact", "label": "DarkInk Compact Dock" },
+        { "value": "split-top", "label": "DarkInk Top Bar" }
       ]
+    },
+    {
+      "id": "accent-style",
+      "type": "select",
+      "label": "Active highlight style",
+      "description": "DarkInk tinted edge rail or bold solid accent fill.",
+      "group": "Shape & Layout",
+      "default": "edge",
+      "choices": [
+        { "value": "edge", "label": "DarkInk Tinted Edge" },
+        { "value": "solid", "label": "Solid Accent Pill" }
+      ]
+    },
+    {
+      "id": "dot-grid",
+      "type": "toggle",
+      "label": "DarkInk micro dot-grid",
+      "description": "Subtle obsidian dot-grid texture on the Library canvas.",
+      "group": "Shape & Layout",
+      "default": true
     },
     {
       "id": "accent",
       "type": "color",
       "label": "Accent color",
-      "description": "Primary DarkInk cyan highlights, active pills, buttons and badges.",
+      "description": "Primary DarkInk cyan highlights, active rails, buttons and badges.",
       "group": "Colors",
       "default": "#00bfcf"
     },
@@ -53,7 +74,7 @@
       "id": "accent-ink",
       "type": "color",
       "label": "Text on accent",
-      "description": "Text and icons on primary accent pills and buttons.",
+      "description": "Text and icons on solid accent buttons and pills.",
       "group": "Colors",
       "default": "#041216"
     },
@@ -176,10 +197,10 @@
       "label": "Library shelves",
       "description": "Open shelves or framed card containers on Library Home.",
       "group": "Shape & Layout",
-      "default": "clean",
+      "default": "cards",
       "choices": [
-        { "value": "clean", "label": "Clean open" },
-        { "value": "cards", "label": "Framed cards" }
+        { "value": "cards", "label": "Framed cards" },
+        { "value": "clean", "label": "Clean open" }
       ]
     },
     {
@@ -210,7 +231,7 @@
       "id": "cover-lift",
       "type": "toggle",
       "label": "Cover hover lift",
-      "description": "Gently lifts game covers on hover.",
+      "description": "Gently lifts game covers with an accent border on hover.",
       "group": "Shape & Layout",
       "default": true
     },

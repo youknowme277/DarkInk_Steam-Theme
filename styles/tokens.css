@@ -14,11 +14,13 @@
   --di-line: rgba(255, 255, 255, 0.08);
   --di-line-strong: color-mix(in srgb, var(--di-accent) 42%, rgba(255, 255, 255, 0.1));
   --di-tint-soft: color-mix(in srgb, var(--di-accent) 10%, transparent);
-  --di-tint-mid: color-mix(in srgb, var(--di-accent) 18%, transparent);
+  --di-tint-mid: color-mix(in srgb, var(--di-accent) 16%, transparent);
+  --di-edge-bg: color-mix(in srgb, var(--di-accent) 13%, var(--di-card));
+  --di-edge-border: color-mix(in srgb, var(--di-accent) 44%, transparent);
   --di-radius: var(--radius, 8px);
   --di-card-radius: calc(var(--radius, 8px) + 4px);
   --di-cover-radius: var(--cover-radius, 8px);
-  --di-overlay-bg: color-mix(in srgb, var(--di-frame) 88%, transparent);
+  --di-overlay-bg: color-mix(in srgb, var(--di-frame) 90%, transparent);
   --di-font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --di-font-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
@@ -30,5 +32,5 @@ html[data-theme-border-strength="none"] {
 
 html[data-theme-border-strength="accent"] {
   --di-line: color-mix(in srgb, var(--di-accent) 22%, transparent);
-  --di-line-strong: color-mix(in srgb, var(--di-accent) 50%, transparent);
+  --di-line-strong: color-mix(in srgb, var(--di-accent) 52%, transparent);
 }

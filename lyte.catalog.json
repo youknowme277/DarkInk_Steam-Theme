@@ -2,8 +2,8 @@
   "schema": 1,
   "type": "theme",
   "name": "DarkInk",
-  "description": "Clean flat obsidian Steam theme with DarkInk cyan accents, custom sidebar navigation layout, 4 presets, and full 12-window coverage.",
-  "version": "1.1.0",
+  "description": "Original flat obsidian Steam theme with DarkInk bot branding, cyan edge accents, 3 layouts, 4 presets, and full 12-window coverage.",
+  "version": "1.2.0",
   "license": "MIT",
   "preview": "assets/preview.png",
   "tags": ["dark", "cyan", "flat", "modern", "minimal"]
