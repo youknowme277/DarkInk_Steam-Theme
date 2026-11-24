@@ -30,23 +30,10 @@
       ]
     },
     {
-      "id": "layout",
-      "type": "select",
-      "label": "Window layout",
-      "description": "Choose between DarkInk Command Rail, Compact Dock, or DarkInk Top Bar.",
-      "group": "Shape & Layout",
-      "default": "command",
-      "choices": [
-        { "value": "command", "label": "DarkInk Command Rail" },
-        { "value": "compact", "label": "DarkInk Compact Dock" },
-        { "value": "split-top", "label": "DarkInk Top Bar" }
-      ]
-    },
-    {
       "id": "accent-style",
       "type": "select",
       "label": "Active highlight style",
-      "description": "DarkInk tinted edge rail or bold solid accent fill.",
+      "description": "DarkInk tinted edge rail or bold solid accent fill on selected games.",
       "group": "Shape & Layout",
       "default": "edge",
       "choices": [
@@ -74,15 +61,15 @@
       "id": "accent-ink",
       "type": "color",
       "label": "Text on accent",
-      "description": "Text and icons on solid accent buttons and pills.",
+      "description": "Text and icons on primary accent buttons and badges.",
       "group": "Colors",
       "default": "#041216"
     },
     {
       "id": "surface-strong",
       "type": "color",
-      "label": "Frame color",
-      "description": "Outer shell, top bar, sidebar frame and web headers.",
+      "label": "Frame and bar color",
+      "description": "Top bar, bottom bar, sidebar frame and web headers.",
       "group": "Colors",
       "default": "#080b10"
     },
@@ -167,22 +154,22 @@
       "default": 8
     },
     {
-      "id": "sidebar-width",
+      "id": "sidebar-max",
       "type": "slider",
-      "label": "Sidebar width",
-      "description": "Width of the Library navigation and game list rail.",
+      "label": "Max sidebar width",
+      "description": "Maximum width when dragging the Library game list wider.",
       "group": "Shape & Layout",
-      "min": 220,
-      "max": 360,
-      "step": 10,
+      "min": 280,
+      "max": 520,
+      "step": 20,
       "unit": "px",
-      "default": 260
+      "default": 420
     },
     {
       "id": "density",
       "type": "select",
       "label": "Navigation size",
-      "description": "Text size of navigation items.",
+      "description": "Text size of the top navigation bar.",
       "group": "Shape & Layout",
       "default": "regular",
       "choices": [
@@ -195,7 +182,7 @@
       "id": "shelf-style",
       "type": "select",
       "label": "Library shelves",
-      "description": "Open shelves or framed card containers on Library Home.",
+      "description": "Framed card containers or clean open shelves on Library Home.",
       "group": "Shape & Layout",
       "default": "cards",
       "choices": [

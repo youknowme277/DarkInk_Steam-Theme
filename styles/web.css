@@ -1,5 +1,11 @@
-body {
-  background-color: var(--di-bg);
+html,
+body,
+.responsive_page_frame,
+.responsive_page_content,
+#page_root,
+#help_home_bg {
+  background-color: var(--di-bg) !important;
+  background-image: none !important;
   color: var(--di-text);
 }
 
@@ -7,19 +13,33 @@ body {
 .help_header,
 #footer {
   background: var(--di-frame) !important;
-  border-color: var(--di-line);
+  background-image: none !important;
+  border-color: var(--di-line) !important;
+}
+
+.help_header,
+.help_site_title,
+.help_intro_text {
+  color: var(--di-text) !important;
+}
+
+.help_section_title,
+.help_page_title {
+  color: var(--di-accent) !important;
 }
 
 .help_main_block,
-.help_wizard_button {
+.help_wizard_button,
+.help_divider {
   background: var(--di-card) !important;
+  background-image: none !important;
   border: 1px solid var(--di-line) !important;
   border-radius: var(--di-radius) !important;
 }
 
 .help_wizard_button:hover {
   border-color: var(--di-line-strong) !important;
-  background: var(--di-tint-soft) !important;
+  background: var(--di-hover) !important;
 }
 
 ::selection {

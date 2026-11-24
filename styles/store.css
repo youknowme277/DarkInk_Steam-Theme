@@ -1,13 +1,18 @@
+html,
 body.v6,
 .home_page_body_ctn,
-.game_page_background {
-  background: var(--di-bg) !important;
+.game_page_background,
+.responsive_page_frame,
+.responsive_page_content {
+  background-color: var(--di-bg) !important;
+  background-image: none !important;
   color: var(--di-text);
 }
 
 #global_header,
 .store_nav_bg {
   background: var(--di-frame) !important;
+  background-image: none !important;
   border-bottom: 1px solid var(--di-line);
 }
 
@@ -27,6 +32,7 @@ body.v6,
 .search_result_row,
 .game_area_purchase_game {
   background: var(--di-card) !important;
+  background-image: none !important;
   border: 1px solid var(--di-line);
 }
 
