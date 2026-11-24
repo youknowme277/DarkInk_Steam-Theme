@@ -14,8 +14,13 @@ html:root body.ContextMenuPopupBody {
 }
 
 html.steam-ContextMenuPopup .steam-ContextMenuMouseOverlay--contextMenuContents,
-.steam-SuperNav--MenuPopup .steam-BasicContextMenuModal--contextMenuContents,
-.steam-ContextMenu .steam-BasicContextMenuModal--contextMenuContents {
+:is(.steam-ContextMenu, .steam-ContextMenuMouseOverlay--contextMenu,
+  .steam-MenuWrapper--MenuPopup, .steam-SuperNav--MenuPopup,
+  .steam-DialogDropDownMenu._DialogInputContainer)
+  :is(.steam-ContextMenu, .steam-ContextMenuMouseOverlay--contextMenu,
+  .steam-ContextMenuMouseOverlay--contextMenuContents,
+  .steam-MenuWrapper--MenuPopup, .steam-BasicContextMenuModal--contextMenuContents,
+  .steam-SuperNav--MenuPopup) {
   background: transparent;
   border: 0;
   border-radius: inherit;

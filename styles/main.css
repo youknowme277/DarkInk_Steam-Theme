@@ -188,22 +188,21 @@ html[data-theme-density="roomy"] .steam-SuperNav { font-size: 17px; }
   color: var(--di-text);
 }
 
-.steam-ViewFiltersBar--SearchBar,
-.steam-SearchFilterInput--Container {
-  border: 1px solid var(--di-line);
-  border-radius: var(--di-radius);
-  transition: border-color 0.14s ease;
+.steam-ViewFiltersBar--SearchBar {
+  border: 0;
 }
 
 .steam-SearchFilterInput--Container {
   background-color: var(--di-raised);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-radius);
+  transition: border-color 0.14s ease;
 }
 
 .steam-SearchFilterInput--Container .steam-SearchFilterInput--SearchInput .DialogTextInputBase:hover {
   background-color: var(--di-hover);
 }
 
-.steam-ViewFiltersBar--SearchBar:focus-within,
 .steam-SearchFilterInput--Container:focus-within {
   border-color: var(--di-accent);
 }
@@ -695,7 +694,12 @@ html[data-theme-cover-lift="true"] .steam-LibraryItemBox:hover {
   background-color: var(--di-accent);
 }
 
-.steam-BottomBarContainer,
+.steam-BottomBarContainer {
+  background-color: var(--di-frame);
+  border-top: 0;
+  box-shadow: none;
+}
+
 .steam-BottomBarContainer--BottomBar {
   background-color: var(--di-frame);
   border-top: 1px solid var(--di-line);
