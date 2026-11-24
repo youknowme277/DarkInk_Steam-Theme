@@ -1,0 +1,154 @@
+body {
+  background-color: var(--di-bg) !important;
+  color: var(--di-text);
+  font-family: var(--di-font-body);
+}
+
+body:not(.profile_page),
+body:not(.profile_page) .apphub_background {
+  background: var(--di-bg) !important;
+}
+
+.responsive_page_frame,
+.responsive_page_frame > .responsive_page_content,
+#responsive_page_template_content {
+  background: transparent;
+}
+
+#global_header,
+.responsive_header,
+#responsive_page_menu,
+#responsive_page_local_menu,
+#footer {
+  background: var(--di-frame) !important;
+  color: var(--di-text);
+}
+
+#global_header,
+.responsive_header {
+  border-bottom: 1px solid var(--di-line);
+}
+
+#footer {
+  border-top: 1px solid var(--di-line);
+}
+
+.FullModalOverlay .ModalOverlayBackground {
+  background: color-mix(in srgb, var(--di-frame) 82%, transparent);
+}
+
+.community_home_header,
+.community_home_header_bg,
+.apphub_HomeHeader,
+.market_header_bg,
+.grouppage_header,
+.profile_header_bg {
+  background-color: var(--di-card) !important;
+  color: var(--di-text);
+  border-radius: var(--di-card-radius);
+}
+
+.community_home_title,
+.apphub_AppName,
+.grouppage_header_name,
+.actual_persona_name,
+.market_title_text {
+  color: var(--di-text) !important;
+  font-family: var(--di-font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.community_home_subtitle,
+.apphub_CardMetaData,
+.market_listing_game_name {
+  color: var(--di-text-muted) !important;
+}
+
+.community_home_shortcut_content,
+.community_home_search_content,
+.apphub_Card,
+.group_overview_announcement,
+.profile_content,
+.profile_customization,
+.workshopItemDetailsHeader,
+.workshopItemControlCtn,
+.market_content_block,
+.market_search_sidebar_contents {
+  background: var(--di-card-grad) !important;
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-card-radius);
+}
+
+.market_listing_row,
+.forum_topic,
+.discussions_forum_row {
+  background: var(--di-card-grad) !important;
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-radius);
+  transition: background-color 0.16s ease, border-color 0.16s ease;
+}
+
+:is(.apphub_Card, .market_listing_row, .forum_topic, .discussions_forum_row):hover {
+  background: var(--di-hover) !important;
+  border-color: var(--di-line-strong);
+}
+
+.workshopAppsRow > .app {
+  background: var(--di-card-grad);
+  box-shadow: inset 0 0 0 1px var(--di-line);
+  border-radius: var(--di-card-radius);
+}
+
+.workshopAppsRow > .app:hover {
+  background: var(--di-hover);
+  box-shadow: inset 0 0 0 1px var(--di-line-strong);
+}
+
+.apphub_CardContentNewsFade {
+  background: linear-gradient(transparent, var(--di-card)) !important;
+}
+
+.apphub_CardContentGuideTitle {
+  background: var(--di-raised);
+  border-radius: var(--di-radius);
+}
+
+.apphub_CardContentPreviewImage,
+.workshopItemDetailsHeader img {
+  border-radius: var(--di-cover-radius);
+}
+
+.community_home_search_apps,
+.community_home_search_players,
+#workshopSearchText,
+.market_search_box_container input,
+.discussionSearchTextContainer input,
+.responsive_tab_select {
+  background: var(--di-raised) !important;
+  color: var(--di-text) !important;
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-radius);
+  box-shadow: none;
+}
+
+.community_home_search_apps:focus-within,
+.community_home_search_players:focus-within {
+  border-color: var(--di-accent);
+  box-shadow: var(--di-glow-sm);
+}
+
+.community_home_sort_buttons > a {
+  background: var(--di-raised);
+  color: var(--di-text) !important;
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-radius);
+  font-weight: 600;
+}
+
+.community_home_sort_buttons > a:hover,
+.community_home_sort_buttons > a.active {
+  background: var(--di-tint-mid);
+  border-color: var(--di-line-strong);
+  color: var(--di-accent) !important;
+}

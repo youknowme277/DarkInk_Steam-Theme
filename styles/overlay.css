@@ -1,0 +1,26 @@
+:is(html.ModalDialogPopup > body.fullheight.ModalDialogBody, .TimelineAndControls, .steam-PlayerAndTimeline--TimelineAndControls) {
+  background: var(--di-glass-glint), var(--di-glass) !important;
+  backdrop-filter: var(--di-material);
+  border: 1px solid var(--di-glass-edge);
+  border-radius: var(--di-card-radius);
+  box-shadow: var(--di-glass-shadow);
+}
+
+.steam-OverlayScreenshotManagerContainer {
+  background: var(--di-card-grad) !important;
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-card-radius);
+}
+
+.steam-SoundtrackControls {
+  background: var(--di-raised);
+  color: var(--di-text);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-radius);
+  transition: background-color 0.16s ease, border-color 0.16s ease;
+}
+
+.steam-SoundtrackControls:hover {
+  background: var(--di-hover);
+  border-color: var(--di-line-strong);
+}

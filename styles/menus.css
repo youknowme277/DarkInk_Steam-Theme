@@ -1,0 +1,53 @@
+html.steam-ContextMenuPopup,
+html:root body.ContextMenuPopupBody {
+  background: transparent;
+}
+
+:root :is(.steam-ContextMenu, .steam-ContextMenuMouseOverlay--contextMenu,
+  .steam-MenuWrapper--MenuPopup, .steam-BasicContextMenuModal--contextMenuContents,
+  .steam-SuperNav--MenuPopup, .steam-DialogDropDownMenu._DialogInputContainer) {
+  background: var(--di-glass-glint), var(--di-glass) !important;
+  backdrop-filter: var(--di-material);
+  border: 1px solid var(--di-glass-edge) !important;
+  border-radius: var(--di-card-radius) !important;
+  box-shadow: var(--di-glass-shadow) !important;
+  color: var(--di-text);
+  padding: 4px;
+}
+
+html.steam-ContextMenuPopup .steam-ContextMenuMouseOverlay--contextMenuContents {
+  background: transparent;
+  border-radius: inherit;
+}
+
+:root :is(.steam-MenuWrapper--MenuItem, .steam-ContextMenuMouseOverlay--contextMenuItem,
+  .steam-BasicContextMenuModal--contextMenuItem, .steam-DialogDropDownMenu_Item) {
+  border-radius: calc(var(--di-radius) - 2px);
+  color: var(--di-text);
+  font-family: var(--di-font-body);
+  transition: background-color 0.14s ease, color 0.14s ease;
+}
+
+:root :is(.steam-MenuWrapper--MenuItem, .steam-ContextMenuMouseOverlay--contextMenuItem,
+  .steam-BasicContextMenuModal--contextMenuItem, .steam-DialogDropDownMenu_Item):hover {
+  background: var(--di-hover) !important;
+  color: var(--di-text) !important;
+}
+
+:root :is(.steam-ContextMenuMouseOverlay--active, .steam-BasicContextMenuModal--active,
+  .steam-BasicContextMenuModal--Selected, .steam-DialogDropDownMenu_Item[aria-selected="true"]) {
+  background: var(--di-tint-soft) !important;
+  box-shadow: inset 3px 0 0 var(--di-accent);
+  color: var(--di-text) !important;
+}
+
+:root .steam-DialogDropDownMenu_Item:focus-visible {
+  outline: 2px solid var(--di-accent);
+  outline-offset: -2px;
+}
+
+:is(.steam-ContextMenuHRSeparator, .steam-ContextMenuMouseOverlay--ContextMenuSeparator,
+  .steam-BasicContextMenuModal--ContextMenuSeparator, .steam-DialogDropDownMenu_Separator) {
+  background: var(--di-line) !important;
+  border-color: var(--di-line) !important;
+}

@@ -1,0 +1,65 @@
+body.v6,
+.home_page_body_ctn,
+.game_page_background {
+  background-color: var(--di-bg) !important;
+  color: var(--di-text);
+}
+
+#global_header,
+.store_nav_bg {
+  background: var(--di-frame) !important;
+  border-bottom: 1px solid var(--di-line);
+}
+
+.store_nav .tab:hover > span,
+.store_nav .tab.focus > span {
+  background: var(--di-tint-soft) !important;
+  color: var(--di-accent) !important;
+  border-radius: var(--di-radius);
+}
+
+.page_content_ctn,
+.tab_item,
+.game_area_purchase_game,
+.block_content {
+  border-radius: var(--di-radius);
+}
+
+.carousel_container,
+.home_ctn .store_capsule,
+.search_result_row {
+  border-radius: var(--di-cover-radius);
+}
+
+.tab_item,
+.search_result_row,
+.game_area_purchase_game {
+  background: var(--di-card-grad) !important;
+  border: 1px solid var(--di-line);
+}
+
+.tab_item.focus,
+.search_result_row:hover {
+  background: var(--di-hover) !important;
+  border-color: var(--di-line-strong);
+  box-shadow: inset 3px 0 0 var(--di-accent);
+}
+
+.discount_pct {
+  background: linear-gradient(135deg, var(--di-accent), var(--di-accent-hover)) !important;
+  color: var(--di-ink) !important;
+  font-weight: 700;
+  border-radius: calc(var(--di-radius) - 2px);
+}
+
+.btn_green_steamui > span {
+  background: linear-gradient(135deg, var(--di-accent), var(--di-accent-hover)) !important;
+  color: var(--di-ink) !important;
+  font-weight: 700;
+  border-radius: var(--di-radius);
+}
+
+#footer {
+  background: var(--di-frame) !important;
+  border-top: 1px solid var(--di-line);
+}

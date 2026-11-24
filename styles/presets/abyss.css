@@ -1,0 +1,8 @@
+:root {
+  --di-frame: #030406;
+  --di-bg: #05070a;
+  --di-card: #0a0e14;
+  --di-card-grad: linear-gradient(145deg, rgba(14, 20, 29, 0.96), rgba(7, 10, 14, 0.99));
+  --di-raised: #101621;
+  --di-hover: color-mix(in srgb, var(--di-accent) 12%, #101621);
+}

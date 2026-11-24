@@ -1,0 +1,11 @@
+:root {
+  --di-accent: #8b5cf6;
+  --di-accent-secondary: #00bfcf;
+  --di-accent-hover: #a78bfa;
+  --di-ink: #ffffff;
+  --di-frame: #090710;
+  --di-bg: #0e0b17;
+  --di-card: #161224;
+  --di-card-grad: linear-gradient(145deg, rgba(28, 22, 46, 0.96), rgba(15, 11, 26, 0.98));
+  --di-raised: #201a33;
+}

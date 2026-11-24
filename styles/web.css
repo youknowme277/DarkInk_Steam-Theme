@@ -1,0 +1,28 @@
+body {
+  background-color: var(--di-bg);
+  color: var(--di-text);
+}
+
+#global_header,
+.help_header,
+#footer {
+  background: var(--di-frame) !important;
+  border-color: var(--di-line);
+}
+
+.help_main_block,
+.help_wizard_button {
+  background: var(--di-card-grad) !important;
+  border: 1px solid var(--di-line) !important;
+  border-radius: var(--di-radius) !important;
+}
+
+.help_wizard_button:hover {
+  border-color: var(--di-line-strong) !important;
+  background: var(--di-tint-soft) !important;
+}
+
+::selection {
+  background: var(--di-accent);
+  color: var(--di-ink);
+}

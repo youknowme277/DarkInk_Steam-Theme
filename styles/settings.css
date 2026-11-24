@@ -1,0 +1,107 @@
+body.ModalDialogBody,
+.steam-SettingsModal,
+.steam-ResponsivePageList--PagedSettingsDialog,
+.steam-ResponsivePageList--PagedSettingsDialog_PageContent,
+.steam-ResponsivePageList--PagedSettingDialog_ContentColumn {
+  background: var(--di-bg) !important;
+  color: var(--di-text);
+}
+
+.steam-ResponsivePageList--PagedSettingsDialog_PageListColumn {
+  background: var(--di-frame) !important;
+  border-right: 1px solid var(--di-line);
+}
+
+.steam-ResponsivePageList--PagedSettingsDialog_Title {
+  color: var(--di-text);
+}
+
+.steam-ResponsivePageList--PagedSettingsDialog_PageListItem {
+  border-radius: var(--di-radius);
+  color: var(--di-text-muted);
+  transition: background-color 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.steam-ResponsivePageList--PagedSettingsDialog_PageListItem:hover {
+  background: var(--di-hover);
+  color: var(--di-text);
+}
+
+.steam-ResponsivePageList--PagedSettingsDialog_PageListItem.steam-ResponsivePageList--Active,
+.steam-PagedSettingsDialog_PageList_ShowTitle--Active {
+  background: var(--di-tint-soft) !important;
+  color: var(--di-text) !important;
+  box-shadow: inset 3px 0 0 var(--di-accent);
+}
+
+.steam-PageListSeparator {
+  background: var(--di-line);
+}
+
+section[id^="lyte-settings-"][role="tabpanel"] {
+  background: var(--di-bg) !important;
+  color: var(--di-text) !important;
+  color-scheme: dark;
+}
+
+section[id^="lyte-settings-"] :is(.lyte-setting, .lyte-summary, .lyte-preference, .lyte-package, .lyte-install, .lyte-folder-row, .lyte-empty, .lyte-hero) {
+  background: var(--di-glass-glint), var(--di-card-grad) !important;
+  border: 1px solid var(--di-line) !important;
+  border-radius: var(--di-card-radius) !important;
+}
+
+section[id^="lyte-settings-"] .lyte-option {
+  background: var(--di-bg) !important;
+  border: 1px solid var(--di-line) !important;
+  border-radius: var(--di-radius) !important;
+}
+
+section[id^="lyte-settings-"] :is(button:not(.lyte-dropdown-option, [role="switch"]), a.lyte-button, select, input:not([type="range"])) {
+  background: var(--di-raised) !important;
+  color: var(--di-text) !important;
+  border: 1px solid var(--di-line) !important;
+  border-radius: var(--di-radius) !important;
+}
+
+section[id^="lyte-settings-"] :is(button:enabled:not(.lyte-dropdown-option, [role="switch"]), a.lyte-button):hover {
+  background: var(--di-hover) !important;
+  border-color: var(--di-line-strong) !important;
+}
+
+section[id^="lyte-settings-"] .lyte-install button[type="submit"]:enabled {
+  background: linear-gradient(135deg, var(--di-accent), var(--di-accent-hover)) !important;
+  border-color: transparent !important;
+  color: var(--di-ink) !important;
+  font-weight: 700;
+}
+
+section[id^="lyte-settings-"] :is(a, button, select, input):focus-visible {
+  outline-color: var(--di-accent) !important;
+}
+
+section[id^="lyte-settings-"] .lyte-dropdown-arrow {
+  color: var(--di-accent) !important;
+}
+
+section[id^="lyte-settings-"] .lyte-dropdown-menu {
+  background: var(--di-glass-glint), var(--di-glass) !important;
+  backdrop-filter: var(--di-material);
+  border: 1px solid var(--di-glass-edge) !important;
+  border-radius: var(--di-card-radius) !important;
+  box-shadow: var(--di-glass-shadow) !important;
+  padding: 4px !important;
+}
+
+section[id^="lyte-settings-"] .lyte-dropdown-option {
+  border-radius: calc(var(--di-radius) - 2px) !important;
+}
+
+section[id^="lyte-settings-"] .lyte-dropdown-option[aria-selected="true"],
+section[id^="lyte-settings-"] .lyte-dropdown-option:hover:enabled {
+  background: var(--di-tint-mid) !important;
+  color: var(--di-text) !important;
+}
+
+section[id^="lyte-settings-"] .lyte-dropdown-option[aria-selected="true"] {
+  box-shadow: inset 3px 0 0 var(--di-accent);
+}

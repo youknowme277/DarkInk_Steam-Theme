@@ -1,0 +1,256 @@
+{
+  "schema": 2,
+  "styles": [
+    { "window": "all", "files": ["styles/tokens.css", "styles/all.css"] },
+    { "window": "desktop", "files": ["styles/desktop.css", "styles/menus.css"] },
+    { "window": "main", "file": "styles/main.css" },
+    { "window": "settings", "file": "styles/settings.css" },
+    { "window": "friends", "file": "styles/friends.css" },
+    { "window": "overlay", "file": "styles/overlay.css" },
+    { "window": "menus", "file": "styles/menus.css" },
+    { "window": "notifications", "file": "styles/notifications.css" },
+    { "window": "dialogs", "file": "styles/dialogs.css" },
+    { "window": "store", "file": "styles/store.css" },
+    { "window": "community", "file": "styles/community.css" },
+    { "window": "web", "file": "styles/web.css" }
+  ],
+  "options": [
+    {
+      "id": "preset",
+      "type": "select",
+      "label": "Theme preset",
+      "description": "Switch between DarkInk color atmospheres.",
+      "group": "Presets",
+      "default": "classic",
+      "choices": [
+        { "value": "classic", "label": "DarkInk Classic" },
+        { "value": "abyss", "label": "DarkInk Abyss (OLED)", "file": "styles/presets/abyss.css" },
+        { "value": "violet", "label": "DarkInk Neon Violet", "file": "styles/presets/violet.css" },
+        { "value": "crimson", "label": "DarkInk Bloodmoon", "file": "styles/presets/crimson.css" }
+      ]
+    },
+    {
+      "id": "accent",
+      "type": "color",
+      "label": "Accent color",
+      "description": "Primary DarkInk cyan highlights, active rails, buttons and badges.",
+      "group": "Colors",
+      "default": "#00bfcf"
+    },
+    {
+      "id": "accent-secondary",
+      "type": "color",
+      "label": "Secondary glow",
+      "description": "Ambient dual-tone spotlight paired with the primary accent.",
+      "group": "Colors",
+      "default": "#8b5cf6"
+    },
+    {
+      "id": "accent-ink",
+      "type": "color",
+      "label": "Text on accent",
+      "description": "Text and icons on primary accent buttons and discount badges.",
+      "group": "Colors",
+      "default": "#041216"
+    },
+    {
+      "id": "surface-strong",
+      "type": "color",
+      "label": "Frame and bar color",
+      "description": "Top bar, bottom bar, sidebars, menus and web headers.",
+      "group": "Colors",
+      "default": "#070a0e"
+    },
+    {
+      "id": "surface",
+      "type": "color",
+      "label": "Background color",
+      "description": "Main Library canvas, Settings content, Friends list and Store pages.",
+      "group": "Colors",
+      "default": "#0b0f14"
+    },
+    {
+      "id": "surface-card",
+      "type": "color",
+      "label": "Card surface",
+      "description": "Shelves, settings rows, dialogs, toast cards and info panels.",
+      "group": "Colors",
+      "default": "#121923"
+    },
+    {
+      "id": "surface-raised",
+      "type": "color",
+      "label": "Control surface",
+      "description": "Buttons, search inputs, pills and hovered cards.",
+      "group": "Colors",
+      "default": "#192231"
+    },
+    {
+      "id": "text",
+      "type": "color",
+      "label": "Primary text",
+      "description": "Headings, game titles and active labels.",
+      "group": "Colors",
+      "default": "#e6eef6"
+    },
+    {
+      "id": "text-muted",
+      "type": "color",
+      "label": "Muted text",
+      "description": "Secondary labels, inactive tabs and metadata.",
+      "group": "Colors",
+      "default": "#94a3b8"
+    },
+    {
+      "id": "ingame",
+      "type": "color",
+      "label": "In-game status",
+      "description": "Running games and friends currently in a game.",
+      "group": "Colors",
+      "default": "#34d399"
+    },
+    {
+      "id": "online",
+      "type": "color",
+      "label": "Online status",
+      "description": "Friends currently online.",
+      "group": "Colors",
+      "default": "#38bdf8"
+    },
+    {
+      "id": "radius",
+      "type": "slider",
+      "label": "Corner radius",
+      "description": "Roundness of buttons, inputs, menus and cards.",
+      "group": "Shape & Layout",
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "id": "cover-radius",
+      "type": "slider",
+      "label": "Cover radius",
+      "description": "Roundness of game covers, event capsules and store tiles.",
+      "group": "Shape & Layout",
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "id": "sidebar-width",
+      "type": "slider",
+      "label": "Sidebar width",
+      "description": "Minimum width of the Library game list sidebar.",
+      "group": "Shape & Layout",
+      "min": 220,
+      "max": 360,
+      "step": 10,
+      "unit": "px",
+      "default": 270
+    },
+    {
+      "id": "density",
+      "type": "select",
+      "label": "Navigation size",
+      "description": "Text size and spacing of the top navigation bar.",
+      "group": "Shape & Layout",
+      "default": "regular",
+      "choices": [
+        { "value": "compact", "label": "Compact" },
+        { "value": "regular", "label": "Regular" },
+        { "value": "roomy", "label": "Roomy" }
+      ]
+    },
+    {
+      "id": "shelf-style",
+      "type": "select",
+      "label": "Library shelves",
+      "description": "Framed DarkInk glass cards or clean open shelves.",
+      "group": "Shape & Layout",
+      "default": "cards",
+      "choices": [
+        { "value": "cards", "label": "Framed DarkInk cards" },
+        { "value": "clean", "label": "Clean open shelves" }
+      ]
+    },
+    {
+      "id": "border-strength",
+      "type": "select",
+      "label": "Surface borders",
+      "description": "Border intensity on bars, cards, menus and dialogs.",
+      "group": "Shape & Layout",
+      "default": "subtle",
+      "choices": [
+        { "value": "none", "label": "None" },
+        { "value": "subtle", "label": "Subtle hairline" },
+        { "value": "accent", "label": "Cyan tinted" }
+      ]
+    },
+    {
+      "id": "hide-whats-new",
+      "type": "toggle",
+      "label": "Hide What's New shelf",
+      "description": "Hides the top news and updates shelf on Library Home.",
+      "group": "Shape & Layout",
+      "default": false,
+      "styles": [
+        { "window": "main", "file": "styles/options/hide-whats-new.css" }
+      ]
+    },
+    {
+      "id": "glow",
+      "type": "toggle",
+      "label": "Ambient dual-tone glow",
+      "description": "Soft cyan and violet spotlight behind Library and game headers.",
+      "group": "Effects",
+      "default": true
+    },
+    {
+      "id": "pattern",
+      "type": "toggle",
+      "label": "DarkInk background motif",
+      "description": "Subtle obsidian dot-grid and crescent ink texture on Library Home.",
+      "group": "Effects",
+      "default": true
+    },
+    {
+      "id": "glass",
+      "type": "select",
+      "label": "Frosted glass",
+      "description": "Backdrop blur behind menus, dialogs, toasts and floating panels.",
+      "group": "Effects",
+      "default": "light",
+      "choices": [
+        { "value": "off", "label": "Off" },
+        { "value": "light", "label": "Light" },
+        { "value": "strong", "label": "Strong" }
+      ]
+    },
+    {
+      "id": "cover-lift",
+      "type": "toggle",
+      "label": "Cover hover lift & glow",
+      "description": "Lifts game covers with a subtle cyan rim highlight on hover.",
+      "group": "Effects",
+      "default": true
+    },
+    {
+      "id": "scrollbar",
+      "type": "select",
+      "label": "Scrollbar style",
+      "description": "Scrollbar appearance across all Steam windows.",
+      "group": "Effects",
+      "default": "accent",
+      "choices": [
+        { "value": "accent", "label": "DarkInk cyan thumb" },
+        { "value": "minimal", "label": "Minimal neutral" },
+        { "value": "hidden", "label": "Hidden" }
+      ]
+    }
+  ]
+}

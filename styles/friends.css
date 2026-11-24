@@ -1,0 +1,135 @@
+html.friendsui-container,
+body.popup_chat_frame,
+.friendlist,
+.FriendsListContent,
+.friendlist .friendlistListContainer,
+.friendListFooter,
+.chatWindow,
+.chatDialogs,
+.ChatTabs.titleBarContainer,
+.chatRoomGroupNavFooter {
+  background: var(--di-bg) !important;
+  box-shadow: none !important;
+  color: var(--di-text);
+  font-family: var(--di-font-body);
+}
+
+.friendListHeaderContainer .currentUserContainer .statusHeaderGlow,
+.FriendListInsetShadowTop,
+.FriendListInsetShadowBottom,
+.chatWindow .chatHeaderGradient {
+  display: none !important;
+}
+
+.friendListHeaderContainer {
+  background: var(--di-glass-glint), var(--di-glass) !important;
+  backdrop-filter: var(--di-material);
+  border: 1px solid var(--di-glass-edge);
+  border-radius: var(--di-card-radius);
+  box-shadow: var(--di-glass-shadow);
+  color: var(--di-text);
+}
+
+.friendListHeaderContainer .currentUserContainer {
+  background: transparent !important;
+}
+
+.quickAccessFriends {
+  background: var(--di-card-grad) !important;
+  border: 1px solid var(--di-line) !important;
+  border-radius: var(--di-radius);
+}
+
+.FriendsListChatSection .chatRoomListContainer {
+  background: var(--di-glass-glint), var(--di-glass);
+  backdrop-filter: var(--di-material);
+  border: 1px solid var(--di-glass-edge);
+  border-top: 0;
+  border-radius: 0 0 var(--di-card-radius) var(--di-card-radius);
+}
+
+.FriendsListChatSection .chatRoomListContainer .ChatRoomGroupAvatar {
+  background: var(--di-raised);
+  border: 1px solid var(--di-line);
+}
+
+.FriendsListChatSection .chatRoomListContainer .ChatRoomGroupAvatar_initials {
+  background: none;
+  color: var(--di-accent);
+  -webkit-text-fill-color: currentColor;
+}
+
+.socialTabContainer .friendTab.socialListTab,
+.FriendsListChatSection .friendsListSectionTitle.chatSectionTitle,
+.friendGroup .groupName {
+  background: var(--di-frame) !important;
+  border-radius: var(--di-radius);
+  color: var(--di-text) !important;
+}
+
+.friendlistListContainer .friend,
+.ChatRoomList .ChatRoomListGroupItem {
+  border-radius: var(--di-radius);
+  transition: background-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.friendlistListContainer .friend:hover,
+.ChatRoomList .ChatRoomListGroupItem:hover {
+  background: var(--di-card) !important;
+  box-shadow: inset 2px 0 0 var(--di-accent);
+}
+
+.socialTabContainer .friendTab.socialListTab.activeTab {
+  box-shadow: inset 0 -2px 0 var(--di-accent);
+  color: var(--di-accent) !important;
+}
+
+.FriendsListChatSection .friendsListSectionTitle.chatSectionTitle {
+  border: 1px solid var(--di-glass-edge);
+  border-radius: var(--di-card-radius) var(--di-card-radius) 0 0;
+}
+
+.friendlistListContainer .friend.online:not(.ingame) .playerName {
+  color: var(--di-online) !important;
+}
+
+.friendlistListContainer .friend.ingame .playerName,
+.friendlistListContainer .friend.ingame .richPresenceLabel {
+  color: var(--di-ingame) !important;
+}
+
+.miniProfileHoverInner .miniProfileContent {
+  background: var(--di-glass-glint), var(--di-glass) !important;
+  backdrop-filter: var(--di-material);
+  border: 1px solid var(--di-glass-edge);
+  border-radius: var(--di-card-radius);
+  box-shadow: var(--di-glass-shadow), var(--di-glow-sm);
+}
+
+.steam-FriendsListAnchored {
+  background: var(--di-frame) !important;
+  border-top: 1px solid var(--di-line);
+}
+
+.steam-FriendsListContainer {
+  background: var(--di-bg) !important;
+}
+
+.FriendsListTabPanel {
+  background: var(--di-card-grad) !important;
+  border-top: 1px solid var(--di-line);
+}
+
+.steam-ChatTabContent_ChatRoom {
+  background: var(--di-bg) !important;
+}
+
+.steam-ChatTabContent_ChatRoomName {
+  color: var(--di-text);
+  font-weight: 700;
+}
+
+.steam-ChatEntry:hover {
+  background: var(--di-tint-soft);
+  border-radius: var(--di-radius);
+}
