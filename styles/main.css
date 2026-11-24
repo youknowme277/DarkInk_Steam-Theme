@@ -1,511 +1,1208 @@
-.steam-OuterFrame,
-.steam-ContentFrame,
-.steam-LeftListMaxPercentage--AppDetailsTransitionGroup {
-  background: var(--di-bg) !important;
-  color: var(--di-text);
+:root {
+  --di-game-gutter: clamp(10px, 1.2vw, 18px);
 }
 
-.steam-FocusNavigationRoot--TopBar,
-.steam-FocusNavigationRoot--TitleBar,
-.steam-FocusNavigationRoot--RootMenuBar,
-.steam-DragArea {
-  background: var(--di-frame) !important;
-  color: var(--di-text);
+.steam-OuterFrame {
+  background: var(--di-frame);
+}
+
+.steam-OuterFrame > .steam-FocusNavigationRoot--TopBar + div >
+  :is(.HighPerfMode, .LowPerfMode) > div:first-child:empty {
+  background: var(--di-frame);
 }
 
 .steam-FocusNavigationRoot--TopBar {
-  border-bottom: 1px solid var(--di-line) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  background: var(--di-frame);
+  border-bottom: 1px solid var(--di-line);
 }
 
-.steam-SuperNavBar,
-.steam-SuperNav {
-  background: transparent !important;
-}
-
-.steam-SuperNav--MenuButton {
-  color: var(--di-text-muted) !important;
-  font-family: var(--di-font-display);
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  transition: color 0.16s ease, text-shadow 0.16s ease;
-}
-
-html[data-theme-density="compact"] .steam-SuperNav--MenuButton {
-  font-size: 13px !important;
-}
-
-html[data-theme-density="roomy"] .steam-SuperNav--MenuButton {
-  font-size: 17px !important;
-}
-
-.steam-SuperNav--MenuButton:hover {
-  color: var(--di-text) !important;
-}
-
-.steam-SuperNav--Selected,
-.steam-SuperNav--Selected .steam-SuperNav--MenuButton {
-  color: var(--di-accent) !important;
-  text-shadow: 0 0 14px color-mix(in srgb, var(--di-accent) 45%, transparent);
-}
-
-.steam-SuperNav--Selected::after {
-  background: linear-gradient(90deg, var(--di-accent), var(--di-accent-hover)) !important;
-  box-shadow: var(--di-glow-sm);
-  border-radius: 999px;
-}
-
-.steam-SuperNav--Arrow {
-  color: var(--di-text-muted) !important;
-  border-radius: var(--di-radius);
-  transition: color 0.14s ease, background-color 0.14s ease;
-}
-
-.steam-SuperNav--Arrow:not(.steam-SuperNav--Disabled):hover {
-  color: var(--di-accent) !important;
-  background: var(--di-tint-soft);
+.steam-FocusNavigationRoot--TitleBar,
+.steam-SuperNavBar {
+  background: transparent;
 }
 
 .steam-RootMenuButton,
-.steam-BranchBar--Button,
-.steam-BranchBar--AccountMenu,
-.steam-NotificationsButton,
-.steam-AnnouncementsButton,
 .steam-SteamButton {
-  background: var(--di-raised) !important;
-  border: 1px solid var(--di-line) !important;
-  border-radius: var(--di-radius) !important;
-  color: var(--di-text) !important;
-  transition: background-color 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+  border-radius: var(--di-radius);
+  color: var(--di-text-muted);
+  transition: background-color 0.14s ease, color 0.14s ease;
 }
 
 .steam-RootMenuButton:hover,
-.steam-BranchBar--Button:hover,
-.steam-BranchBar--AccountMenu:hover,
-.steam-NotificationsButton:hover,
-.steam-AnnouncementsButton:hover,
 .steam-SteamButton:hover {
-  background: var(--di-hover) !important;
-  border-color: var(--di-line-strong) !important;
-}
-
-.steam-BranchBar--Active {
-  background: var(--di-tint-mid) !important;
-  border-color: var(--di-accent) !important;
-  color: var(--di-accent) !important;
-  box-shadow: var(--di-glow-sm);
-}
-
-.steam-URLBarReplacement {
-  background: var(--di-frame) !important;
-  border-bottom: 1px solid var(--di-line);
-  color: var(--di-text-muted);
-}
-
-.steam-BottomBarContainer,
-.steam-BottomBarContainer--BottomBar {
-  background: var(--di-frame) !important;
-  border-top: 1px solid var(--di-line) !important;
-  color: var(--di-text-muted);
-}
-
-.steam-BottomBarContainer--DownloadStatus,
-.steam-DownloadStatusContainer {
-  color: var(--di-text) !important;
-}
-
-.steam-UpdateDownloadProgress,
-.steam-HeaderDownloadProgressBar {
-  background: linear-gradient(90deg, var(--di-accent), var(--di-accent-hover)) !important;
-  box-shadow: var(--di-glow-sm);
-  border-radius: 999px;
-}
-
-.steam-HeaderDownloadProgressBarBackground {
-  background: var(--di-raised) !important;
-  border-radius: 999px;
-}
-
-.steam-LeftListMaxPercentage--LeftListSizableContainer {
-  background: var(--di-frame) !important;
-  min-width: var(--sidebar-width, 270px);
-  border-right: 1px solid var(--di-line);
-}
-
-.steam-LeftListMaxPercentage--LibraryWindowDivider {
-  background: var(--di-line) !important;
-  transition: background-color 0.16s ease;
-}
-
-.steam-LeftListMaxPercentage--LibraryWindowDivider:hover {
-  background: var(--di-accent) !important;
-}
-
-.steam-GameListHomeAndSearch--Container,
-.steam-ViewFiltersBar--Bar,
-.steam-ViewFiltersBar--MenuHeader,
-.steam-ViewFiltersBar--SearchBar {
-  background: transparent !important;
-}
-
-.steam-HomeBox,
-.steam-CollectionIconBox--Bar {
-  background: var(--di-card-grad) !important;
-  border: 1px solid var(--di-line) !important;
-  border-radius: var(--di-radius) !important;
-  color: var(--di-text) !important;
-  transition: background-color 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
-}
-
-.steam-HomeBox:hover,
-.steam-CollectionIconBox--Bar:hover {
-  background: var(--di-hover) !important;
-  border-color: var(--di-line-strong) !important;
-}
-
-.steam-CollectionIconBox--Selected {
-  background: var(--di-tint-mid) !important;
-  border-color: var(--di-accent) !important;
-  color: var(--di-accent) !important;
-  box-shadow: var(--di-glow-sm);
-}
-
-.steam-SearchFilterInput--Container,
-.steam-ContainerHide--Container {
-  background: var(--di-raised) !important;
-  border: 1px solid var(--di-line) !important;
-  border-radius: var(--di-radius) !important;
-  transition: border-color 0.16s ease, box-shadow 0.16s ease;
-}
-
-.steam-SearchFilterInput--Container:focus-within,
-.steam-ContainerHide--Container:focus-within {
-  border-color: var(--di-accent) !important;
-  box-shadow: var(--di-glow-sm);
-}
-
-.steam-SearchFilterInput--SearchInput,
-.steam-ContainerHide--SearchInput {
-  color: var(--di-text) !important;
-  background: transparent !important;
-}
-
-.steam-AdvancedSearchButton {
-  background: var(--di-raised) !important;
-  border: 1px solid var(--di-line) !important;
-  border-radius: var(--di-radius) !important;
-  color: var(--di-text-muted) !important;
-}
-
-.steam-AdvancedSearchButton:hover {
-  background: var(--di-hover) !important;
-  border-color: var(--di-line-strong) !important;
-  color: var(--di-accent) !important;
-}
-
-.steam-SectionHeaderContent--Container {
-  background: transparent !important;
-}
-
-.steam-SectionHeader--LabelText {
-  color: var(--di-text-muted) !important;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-size: 11px;
-}
-
-.steam-GameListEntryContainer,
-.steam-GameListEntryContainer--Container {
-  border-radius: calc(var(--di-radius) - 2px);
-  transition: background-color 0.14s ease, box-shadow 0.14s ease, color 0.14s ease;
-}
-
-.steam-GameListEntryContainer--Container:hover {
-  background: var(--di-hover) !important;
-}
-
-.steam-GameListEntryContainer--Selected {
-  background: linear-gradient(90deg, var(--di-tint-mid), color-mix(in srgb, var(--di-accent) 4%, transparent)) !important;
-  box-shadow: inset 3px 0 0 var(--di-accent) !important;
-  color: var(--di-text) !important;
-}
-
-.steam-LibraryHome,
-.steam-LibraryHome--Container {
-  background-color: var(--di-bg) !important;
-  background-image:
-    radial-gradient(ellipse 68% 36% at 18% 0%, color-mix(in srgb, var(--di-accent) 16%, transparent), transparent 72%),
-    radial-gradient(ellipse 52% 32% at 84% 4%, var(--di-tint-violet), transparent 70%),
-    url("../assets/darkink-pattern.svg"),
-    radial-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px) !important;
-  background-repeat: no-repeat, no-repeat, no-repeat, repeat !important;
-  background-position: top left, top right, top 18px right 28px, 0 0 !important;
-  background-size: auto, auto, 340px 260px, 28px 28px !important;
-}
-
-html[data-theme-glow="false"] .steam-LibraryHome,
-html[data-theme-glow="false"] .steam-LibraryHome--Container {
-  background-image:
-    url("../assets/darkink-pattern.svg"),
-    radial-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px) !important;
-  background-repeat: no-repeat, repeat !important;
-  background-position: top 18px right 28px, 0 0 !important;
-  background-size: 340px 260px, 28px 28px !important;
-}
-
-html[data-theme-pattern="false"] .steam-LibraryHome,
-html[data-theme-pattern="false"] .steam-LibraryHome--Container {
-  background-image:
-    radial-gradient(ellipse 68% 36% at 18% 0%, color-mix(in srgb, var(--di-accent) 16%, transparent), transparent 72%),
-    radial-gradient(ellipse 52% 32% at 84% 4%, var(--di-tint-violet), transparent 70%) !important;
-  background-repeat: no-repeat, no-repeat !important;
-  background-position: top left, top right !important;
-  background-size: auto, auto !important;
-}
-
-html[data-theme-glow="false"][data-theme-pattern="false"] .steam-LibraryHome,
-html[data-theme-glow="false"][data-theme-pattern="false"] .steam-LibraryHome--Container {
-  background-image: none !important;
-}
-
-.steam-UpdatesContainer,
-.steam-ShowcaseOuter {
-  background: var(--di-card-grad) !important;
-  border: 1px solid var(--di-line) !important;
-  border-radius: var(--di-card-radius) !important;
-  box-shadow: 0 10px 28px -18px rgba(0, 0, 0, 0.85);
-}
-
-html[data-theme-shelf-style="clean"] .steam-UpdatesContainer,
-html[data-theme-shelf-style="clean"] .steam-ShowcaseOuter {
-  background: transparent !important;
-  border-color: transparent !important;
-  box-shadow: none !important;
-}
-
-.steam-LibraryItemBox,
-.steam-HeaderAppPortraitContainer {
-  border-radius: var(--di-cover-radius) !important;
-  overflow: hidden;
-  border: 1px solid var(--di-line);
-  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-html[data-theme-cover-lift="true"] .steam-LibraryItemBox:hover {
-  transform: translateY(-4px);
-  border-color: var(--di-accent);
-  box-shadow: 0 12px 28px -10px rgba(0, 0, 0, 0.9), 0 0 18px color-mix(in srgb, var(--di-accent) 32%, transparent);
-}
-
-.steam-HeroContainer,
-.steam-TopCapsule,
-.steam-TopCapsule--HeaderBackgroundImage,
-.steam-TopCapsule--ImgContainer {
-  background-color: var(--di-bg) !important;
-}
-
-.steam-BackdropGlass {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--di-bg) 52%, transparent), var(--di-bg) 96%) !important;
-  backdrop-filter: var(--di-material);
-}
-
-.steam-PlaySection,
-.steam-PlayBarLabel--Container,
-.steam-PlayBarLabel--InnerContainer,
-.steam-PlayBarLabel--StickyHeader {
-  background: color-mix(in srgb, var(--di-bg) 82%, transparent) !important;
-  backdrop-filter: var(--di-material);
-  border-bottom: 1px solid var(--di-line);
-}
-
-.steam-PlayButtonContainer--PlayButton,
-.steam-PlayButtonContainer--ButtonChild {
-  background: linear-gradient(135deg, var(--di-accent), var(--di-accent-hover)) !important;
-  color: var(--di-ink) !important;
-  border-radius: var(--di-radius) !important;
-  font-weight: 800 !important;
-  box-shadow: var(--di-glow-md) !important;
-  transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
-}
-
-.steam-PlayButtonContainer--PlayButton:hover,
-.steam-PlayButtonContainer--ButtonChild:hover {
-  filter: brightness(1.08);
-  box-shadow: 0 8px 28px -4px color-mix(in srgb, var(--di-accent) 55%, transparent) !important;
-}
-
-.steam-PlayButtonContainer--Disabled {
-  opacity: 0.5;
-  box-shadow: none !important;
-}
-
-.steam-PlayButtonContainer--StreamingSelector,
-.steam-AppActionButton {
-  background: var(--di-raised) !important;
-  border: 1px solid var(--di-line) !important;
-  border-radius: var(--di-radius) !important;
-  color: var(--di-text) !important;
-  transition: background-color 0.16s ease, border-color 0.16s ease;
-}
-
-.steam-PlayButtonContainer--StreamingSelector:hover,
-.steam-AppActionButton:hover {
-  background: var(--di-hover) !important;
-  border-color: var(--di-line-strong) !important;
-}
-
-.steam-PlayBarLabel,
-.steam-PlayBarLabel--PlayBarDetailLabel,
-.steam-UnlockedLabel {
-  color: var(--di-text-muted) !important;
-}
-
-.steam-PlayBarLabel--GameStat,
-.steam-PlayBarLabel--GameStatsSection,
-.steam-PlayBarLabel--GameStatIcon {
-  color: var(--di-text) !important;
-}
-
-.steam-PlayBarLabel--DetailsProgressBar {
-  background: linear-gradient(90deg, var(--di-accent), var(--di-accent-hover)) !important;
-  box-shadow: var(--di-glow-sm);
-  border-radius: 999px;
-}
-
-.steam-AppDetailsSection,
-.steam-AppDetailsSectionContainer,
-.steam-AppGameInfoContainer,
-.steam-LinksSection,
-.steam-RightColumnSection,
-.steam-Spotlights--LeftColumn,
-.steam-Spotlights--RightColumn,
-.steam-ActivityFeedContainer,
-.steam-AppActivityDay--EventBody,
-.steam-Event,
-.steam-PostTextEntryArea {
-  background: var(--di-card-grad) !important;
-  border: 1px solid var(--di-line) !important;
-  border-radius: var(--di-card-radius) !important;
+  background: var(--di-hover);
   color: var(--di-text);
 }
 
-.steam-AppDetailsSection--Highlight,
-.steam-Spotlights--SeekTarget {
-  border-color: var(--di-line-strong) !important;
-  box-shadow: inset 3px 0 0 var(--di-accent);
+@media (min-width: 1100px) and (min-height: 620px) {
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame:has(> .steam-FocusNavigationRoot--TopBar .steam-SuperNav) {
+    --di-rail: var(--sidebar-width, 260px);
+    --di-rail-inset: 18px;
+    --di-rail-row: clamp(34px, 4.4vh, 40px);
+    --di-rail-nav: calc(74px + 4 * var(--di-rail-row));
+    --di-rail-foot: 116px;
+    --di-search: clamp(140px, calc(32vw - 260px), 320px);
+    --di-nav-font: 14px;
+    display: grid;
+    grid-template: "rail title" 52px
+                   "rail content" calc(var(--di-rail-nav) - 52px)
+                   ". content" minmax(0, 1fr)
+                   "foot content" var(--di-rail-foot) / var(--di-rail) minmax(0, 1fr);
+    isolation: isolate;
+  }
+
+  html[data-theme-density="compact"]:not([data-theme-layout="classic"]) .steam-OuterFrame {
+    --di-nav-font: 12px;
+  }
+
+  html[data-theme-density="roomy"]:not([data-theme-layout="classic"]) .steam-OuterFrame {
+    --di-nav-font: 16px;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame:has(> .steam-FocusNavigationRoot--TopBar .steam-SuperNav)::before {
+    content: "";
+    position: absolute;
+    inset: 10px auto 10px 10px;
+    z-index: -1;
+    width: calc(var(--di-rail) - 20px);
+    background: var(--di-bg);
+    border: 1px solid var(--di-line);
+    border-radius: var(--di-card-radius);
+    pointer-events: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame > .steam-FocusNavigationRoot--TopBar:has(.steam-SuperNav) {
+    display: contents;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame > .steam-FocusNavigationRoot--TopBar .steam-FocusBar,
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-LeftListMaxPercentage--LibraryWindowDivider {
+    display: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-URLBarReplacement:empty {
+    min-height: 0;
+    height: 0;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-FocusNavigationRoot--TitleBar {
+    grid-area: title;
+    box-sizing: border-box;
+    height: 52px;
+    padding-inline-start: 84px;
+    align-items: center;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame:has(.steam-LeftListMaxPercentage--LeftListSizableContainer .steam-ContainerHide--Container)
+    .steam-FocusNavigationRoot--TitleBar {
+    padding-inline-start: calc(88px + var(--di-search));
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-FocusNavigationRoot--TitleBar .steam-DragArea {
+    order: -1;
+    flex: 1 1 0;
+    min-width: 8px;
+    align-self: stretch;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-FocusNavigationRoot--RootMenuBar {
+    flex: 0 1 auto;
+    min-width: 0;
+    height: 36px;
+    margin: 0 8px 0 auto;
+    padding: 0 4px;
+    align-items: center;
+    border-radius: 999px;
+    background: var(--di-bg);
+    border: 1px solid var(--di-line);
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-FocusNavigationRoot--RootMenuBar .steam-RootMenuButton {
+    height: 28px;
+    padding-inline: clamp(6px, 0.75vw, 12px);
+    align-items: center;
+    border-radius: 999px;
+    font-size: 13px;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-FocusNavigationRoot--RootMenuBar .steam-RootMenuButton:has(.steam-SteamButton) {
+    position: fixed;
+    top: 20px;
+    left: 26px;
+    z-index: 55;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+    height: 32px;
+    padding: 0 6px 0 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--di-text);
+    font: 800 18px/1 var(--di-font-display);
+    letter-spacing: 0.06em;
+    -webkit-app-region: no-drag;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-RootMenuButton:has(.steam-SteamButton) > * {
+    display: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-RootMenuButton:has(.steam-SteamButton)::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background: var(--di-accent);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M36 4C20 4 8 16 8 32s12 28 28 28c7 0 13-2.5 18-6.8C40 51.5 29 39.5 29 25c0-9.2 4.8-17 12-21-1.6-.1-3.3 0-5 0z'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-RootMenuButton:has(.steam-SteamButton)::after {
+    content: "DARKINK";
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNavBar {
+    grid-area: rail;
+    z-index: 5;
+    display: block;
+    height: auto;
+    min-height: 0;
+    padding: 62px var(--di-rail-inset) 0;
+    overflow: visible;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3px;
+    min-height: 0;
+    height: auto;
+    margin: 0;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNav > .steam-SuperNav--Arrow {
+    position: fixed;
+    top: 8px;
+    left: var(--di-rail);
+    z-index: 45;
+    box-sizing: border-box;
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 50%;
+    background: var(--di-bg);
+    border: 1px solid var(--di-line);
+    color: var(--di-text-muted);
+    fill: currentColor;
+    -webkit-app-region: no-drag;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNav > .steam-SuperNav--Arrow:nth-child(2) {
+    left: calc(var(--di-rail) + 40px);
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNav > .steam-SuperNav--Arrow:not(.steam-SuperNav--Disabled):hover {
+    background: var(--di-hover);
+    border-color: var(--di-line-strong);
+    color: var(--di-text);
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNav > .steam-SuperNav--Arrow.steam-SuperNav--Disabled {
+    background: transparent;
+    border-color: transparent;
+    opacity: 0.35;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNavMenu {
+    display: flex;
+    align-items: flex-start;
+    height: 0;
+    margin-block-end: var(--di-rail-row);
+    padding: 0;
+    transform: translateX(calc(100% + 8px));
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNav .steam-SuperNavMenu > .steam-SuperNav--MenuButton {
+    display: flex;
+    flex: 0 0 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    width: 100%;
+    height: var(--di-rail-row);
+    padding: 0 14px;
+    transform: translateX(calc(-100% - 8px));
+    border-radius: var(--di-radius);
+    background: transparent;
+    color: var(--di-text-muted);
+    font-family: var(--di-font-body);
+    font-size: var(--di-nav-font);
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    text-shadow: none;
+    white-space: nowrap;
+    -webkit-app-region: no-drag;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNav .steam-SuperNavMenu > .steam-SuperNav--MenuButton::after {
+    display: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNavMenu > .steam-SuperNav--MenuButton::before {
+    content: "";
+    flex: 0 0 18px;
+    height: 18px;
+    background: currentColor;
+    mask: var(--di-nav-icon) center / contain no-repeat;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNavMenu:nth-of-type(1) {
+    --di-nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M4 10v10h16V10M3 6h18l1 4c0 2-3 3-5 1-1 2-4 2-5 0-1 2-4 2-5 0-2 2-5 1-5-1zm6 14v-5h6v5'/%3E%3C/svg%3E");
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNavMenu:nth-of-type(2) {
+    --di-nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linejoin='round'%3E%3Cpath d='M3 4h4v16H3zm6 0h4v16H9zm6 1 4-1 4 15-4 1z'/%3E%3C/svg%3E");
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNavMenu:nth-of-type(3) {
+    --di-nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round'%3E%3Ccircle cx='9' cy='7' r='3'/%3E%3Cpath d='M3 20v-1a6 6 0 0 1 12 0v1m1-16a3 3 0 0 1 0 6m2 3a6 6 0 0 1 3 6v1'/%3E%3C/svg%3E");
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNavMenu:nth-of-type(4) {
+    --di-nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round'%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3Cpath d='M5 21v-1a7 7 0 0 1 14 0v1'/%3E%3C/svg%3E");
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNav .steam-SuperNavMenu:hover > .steam-SuperNav--MenuButton,
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNav .steam-SuperNavMenu > .steam-SuperNav--MenuButton:focus-visible {
+    background: var(--di-raised);
+    color: var(--di-text);
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-SuperNav .steam-SuperNavMenu.steam-SuperNav--Selected > .steam-SuperNav--MenuButton {
+    background: var(--di-accent);
+    color: var(--di-ink);
+    font-weight: 600;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame > .steam-ContentFrame {
+    grid-area: content;
+    min-height: 0;
+    margin: 0 12px 12px 0;
+    overflow: hidden;
+    border-radius: var(--di-card-radius);
+    border: 1px solid var(--di-line);
+    background: var(--di-bg);
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-LeftListMaxPercentage--LeftListSizableContainer {
+    position: fixed;
+    inset: var(--di-rail-nav) auto var(--di-rail-foot) 0;
+    z-index: 5;
+    box-sizing: border-box;
+    width: var(--di-rail) !important;
+    min-width: 0;
+    max-width: none;
+    height: auto;
+    padding-inline: var(--di-rail-inset);
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-LeftListMaxPercentage--LeftListSizableContainer .steam-ContainerHide--Container {
+    position: fixed;
+    top: 8px;
+    left: calc(var(--di-rail) + 84px);
+    z-index: 40;
+    box-sizing: border-box;
+    width: var(--di-search);
+    height: 36px;
+    margin: 0;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-ContainerHide--SearchInput .DialogInput_Wrapper {
+    border-radius: 999px;
+    background: var(--di-bg);
+    border: 1px solid var(--di-line);
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-ContainerHide--SearchInput .DialogInput {
+    background-color: transparent;
+    border: 0;
+    border-radius: inherit;
+    box-shadow: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-ContainerHide--SearchInput:focus-within .DialogInput_Wrapper {
+    border-color: var(--di-accent);
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-ContainerHide--Container .steam-AdvancedSearchButton {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-GameListHomeAndSearch--Container > :has(a[href="/library/collections"]) {
+    margin: 0 0 7px;
+    padding: 4px;
+    border-radius: var(--di-card-radius);
+    background: var(--di-card);
+    border: 1px solid var(--di-line);
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-GameListEntryContainer--Selected .steam-GameListEntryContainer--Container,
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-GameListEntryContainer--Selected.steam-GameListEntryContainer--Container {
+    background: var(--di-accent) !important;
+    color: var(--di-ink) !important;
+    font-weight: 600;
+    box-shadow: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame > .steam-BottomBarContainer {
+    grid-area: foot;
+    box-sizing: border-box;
+    padding: 4px var(--di-rail-inset) 18px;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-BottomBarContainer--BottomBar {
+    display: grid;
+    grid-template: "downloads downloads" 34px
+                   "add friends" 52px / minmax(0, 1fr) minmax(0, 1fr);
+    gap: 8px;
+    height: auto;
+    padding: 0;
+    background: transparent;
+    border-top: 0;
+    box-shadow: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-BottomBarContainer--BottomBar >
+    :is(.steam-BottomBarContainer--AddGameButton, .steam-BottomBarContainer--DownloadStatus, .steam-FriendsButton) {
+    box-sizing: border-box;
+    width: auto;
+    min-width: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0 8px;
+    gap: 4px;
+    color: var(--di-text-muted);
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-BottomBarContainer--BottomBar >
+    :is(.steam-BottomBarContainer--AddGameButton, .steam-FriendsButton) {
+    justify-content: center;
+    border-radius: var(--di-radius);
+    background: var(--di-card);
+    border: 1px solid var(--di-line);
+    font-size: 11px;
+    text-align: center;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-BottomBarContainer--BottomBar > .steam-BottomBarContainer--AddGameButton {
+    grid-area: add;
+    flex-direction: column;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-BottomBarContainer--BottomBar > .steam-FriendsButton {
+    grid-area: friends;
+    flex-direction: column-reverse;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-BottomBarContainer--BottomBar > .steam-BottomBarContainer--DownloadStatus {
+    grid-area: downloads;
+    border-radius: var(--di-radius);
+    font-size: 12px;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-OuterFrame .steam-BottomBarContainer--BottomBar >
+    :is(.steam-BottomBarContainer--AddGameButton, .steam-BottomBarContainer--DownloadStatus, .steam-FriendsButton):hover {
+    background: var(--di-hover);
+    color: var(--di-text);
+  }
 }
 
-.steam-LinksSection--Link,
-.steam-LinksSection--LinkInner {
-  color: var(--di-text-muted) !important;
+.steam-AnnouncementsButton,
+.steam-NotificationsButton,
+.steam-BranchBar--AccountMenu {
+  background: var(--di-card);
+  border: 1px solid var(--di-line);
   border-radius: var(--di-radius);
-  transition: color 0.14s ease, background-color 0.14s ease;
+  color: var(--di-text-muted);
+  transition: background-color 0.14s ease, color 0.14s ease, border-color 0.14s ease;
 }
 
-.steam-LinksSection--Link:hover,
-.steam-LinksSection--LinkInner:hover {
-  color: var(--di-accent) !important;
+.steam-AnnouncementsButton:hover,
+.steam-NotificationsButton:hover,
+.steam-BranchBar--AccountMenu:hover {
+  background: var(--di-hover);
+  border-color: var(--di-line-strong);
+  color: var(--di-text);
+}
+
+.steam-BranchBar--Button.steam-BranchBar--Active {
+  background: var(--di-tint-mid);
+  border-color: var(--di-line-strong);
+  color: var(--di-accent);
+}
+
+.steam-SuperNav--MenuButton {
+  color: var(--di-text-muted);
+}
+
+.steam-SuperNav .steam-SuperNavMenu.steam-SuperNav--Selected .steam-SuperNav--MenuButton {
+  color: var(--di-accent);
+}
+
+.steam-SuperNav .steam-SuperNavMenu.steam-SuperNav--Selected .steam-SuperNav--MenuButton::after {
+  background: var(--di-accent);
+}
+
+html[data-theme-density="compact"] .steam-SuperNav { font-size: 12px; }
+html[data-theme-density="regular"] .steam-SuperNav { font-size: 14px; }
+html[data-theme-density="roomy"] .steam-SuperNav { font-size: 16px; }
+
+.steam-LeftListMaxPercentage--LeftListSizableContainer {
+  min-width: var(--sidebar-width, 260px);
+  background: var(--di-frame);
+  border-right: 1px solid var(--di-line);
+}
+
+.steam-GameListHomeAndSearch--Container,
+.steam-HomeBox,
+.steam-ViewFiltersBar--Bar {
+  background: transparent;
+}
+
+.steam-GameListHomeAndSearch--Container > :has(a[href="/library/collections"]) {
+  background: transparent;
+}
+
+.steam-GameListHomeAndSearch--Container a[href="/library/collections"] {
+  background: var(--di-raised);
+  border-radius: var(--di-radius);
+  box-shadow: inset 0 0 0 1px var(--di-line);
+}
+
+.steam-GameListHomeAndSearch--Container a[href="/library/collections"]:hover {
+  background: var(--di-hover);
+}
+
+.steam-ViewFiltersBar--SearchBar,
+.steam-SearchFilterInput--Container {
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-radius);
+}
+
+.steam-SearchFilterInput--Container {
+  background-color: var(--di-raised);
+}
+
+.steam-SearchFilterInput--Container .steam-SearchFilterInput--SearchInput .DialogTextInputBase:hover {
+  background-color: var(--di-hover);
+}
+
+.steam-ViewFiltersBar--SearchBar:focus-within,
+.steam-SearchFilterInput--Container:focus-within {
+  border-color: var(--di-accent);
+}
+
+.steam-ViewFiltersBar--Bar .steam-ViewFiltersBar--MenuHeader {
+  background-color: var(--di-raised);
+  border-radius: var(--di-radius);
+}
+
+.steam-ViewFiltersBar--Bar .steam-ViewFiltersBar--MenuHeader:hover {
+  background-color: var(--di-hover);
+}
+
+.steam-HomeBox .steam-CollectionIconBox--Bar {
+  background-color: var(--di-card);
+  border-radius: var(--di-radius);
+}
+
+.steam-HomeBox .steam-CollectionIconBox--Bar:hover {
+  background-color: var(--di-hover);
+}
+
+.steam-HomeBox .steam-CollectionIconBox--Bar.steam-CollectionIconBox--Selected {
+  background-color: var(--di-raised);
+  box-shadow: inset 2px 0 0 var(--di-accent);
+  color: var(--di-text);
+}
+
+.steam-GameListEntryContainer {
+  border-radius: var(--di-radius);
+}
+
+.steam-GameListEntryContainer:hover {
   background: var(--di-tint-soft);
 }
 
-.steam-HeaderFeatures,
-.steam-FocusBar,
-.steam-ItemListWrapper,
-.steam-HeaderDownloadContainer {
-  background: transparent !important;
+.steam-GameListEntryContainer--Selected .steam-GameListEntryContainer--Container,
+.steam-GameListEntryContainer--Selected.steam-GameListEntryContainer--Container {
+  background-color: var(--di-raised) !important;
+  border-radius: var(--di-radius);
+  box-shadow: inset 2px 0 0 var(--di-accent);
 }
 
-.steam-PartnerEventFeaturedHeader,
-.steam-PartnerEventLargeImage_Container,
-.steam-PartnerEventMediumImage_Container,
-.steam-PartnerEventRowCapsule_Container,
-.steam-PartnerEventTextOnly {
-  background: var(--di-card-grad) !important;
-  border: 1px solid var(--di-line) !important;
-  border-radius: var(--di-card-radius) !important;
-  transition: border-color 0.16s ease, background-color 0.16s ease;
+.steam-GameListEntryContainer--Container:focus-visible {
+  outline: 2px solid var(--di-accent);
+  outline-offset: -2px;
 }
 
-.steam-PartnerEventLargeImage_Container:hover,
-.steam-PartnerEventMediumImage_Container:hover,
-.steam-PartnerEventRowCapsule_Container:hover {
-  border-color: var(--di-line-strong) !important;
+.steam-LeftListMaxPercentage--LeftListSizableContainer .steam-SectionHeaderContent--Container {
+  background: transparent;
+  border-radius: var(--di-radius);
 }
 
-.steam-PartnerEventLargeImage_Image,
-.steam-PartnerEventMediumImage_Image {
+.steam-LeftListMaxPercentage--LeftListSizableContainer .steam-SectionHeaderContent--Container:hover {
+  background: var(--di-hover);
+}
+
+.steam-SectionHeader--LabelText {
+  color: var(--di-text-muted);
+}
+
+.steam-HeaderPageControls--Name {
+  color: var(--di-text);
+  font-family: var(--di-font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup,
+.steam-LibraryHome--Container {
+  background: var(--di-bg);
+}
+
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup > div > .steam-PlayBarLabel--Container + div > div {
+  background: var(--di-bg);
+}
+
+.steam-LibraryHome--Container .steam-LibraryHome,
+.steam-LibraryHome--Container .steam-UpdatesContainer,
+.steam-ShowcaseOuter {
+  background: transparent;
+}
+
+html[data-theme-shelf-style="cards"] .steam-ShowcaseOuter {
+  background: var(--di-card);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-card-radius);
+  padding: 12px 14px;
+}
+
+.steam-LibraryItemBox {
   border-radius: var(--di-cover-radius);
+  overflow: hidden;
+  transition: transform 0.16s ease, border-color 0.16s ease;
 }
 
-.steam-PartnerEventLargeImage_Summary,
-.steam-PartnerEventMediumImage_Summary {
-  color: var(--di-text-muted) !important;
+html[data-theme-cover-lift="true"] .steam-LibraryItemBox:hover {
+  transform: translateY(-2px);
 }
 
-.steam-DownloadsPage--TopBar,
+.steam-PartnerEventRowCapsule_Container,
+.steam-PartnerEventRowCapsule_Container > div:has(> img) {
+  border-radius: var(--di-cover-radius);
+  background: var(--di-card);
+  overflow: hidden;
+}
+
+.steam-HeroContainer {
+  border-bottom: 1px solid var(--di-line);
+}
+
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-TopCapsule {
+  width: auto;
+  margin: var(--di-game-gutter) var(--di-game-gutter) 0;
+}
+
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-TopCapsule--HeaderBackgroundImage >
+  .steam-TopCapsule--ImgContainer {
+  clip-path: inset(0 round var(--di-card-radius));
+}
+
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-PlayBarLabel--Container:has(~ .steam-LinksSection) {
+  width: auto;
+  margin-inline: calc(var(--di-game-gutter) + 4px);
+}
+
+@media (min-width: 960px) {
+  .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-PlayBarLabel--Container:has(~ .steam-LinksSection) {
+    position: relative;
+    z-index: 2;
+    margin-block-start: -18px;
+  }
+}
+
+.steam-PlaySection,
+.steam-PlayBarLabel--Container > :has(> .steam-PlayBarLabel--InnerContainer),
+.LowPerfMode .steam-PlayBarLabel--StickyHeader > :has(> .steam-PlayBarLabel--InnerContainer) {
+  background: var(--di-overlay-bg);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-card-radius);
+  box-shadow: none;
+}
+
+.steam-PlayBarLabel--Container .steam-PlayBarLabel--GameStatsSection {
+  gap: 6px;
+}
+
+.steam-PlayBarLabel--Container .steam-PlayBarLabel--GameStat {
+  background: color-mix(in srgb, var(--di-card) 82%, transparent);
+  border-radius: var(--di-radius);
+  box-shadow: inset 0 0 0 1px var(--di-line);
+  padding-inline: clamp(6px, 0.8vw, 12px);
+}
+
+.steam-PlayBarLabel--Container .steam-PlayBarLabel--GameStat :is(.steam-PlayBarLabel, .steam-PlayBarLabel--GameStatIcon) {
+  color: var(--di-text-muted);
+}
+
+.steam-PlayBarLabel--Container .steam-PlayBarLabel--GameStat .steam-PlayBarLabel--PlayBarDetailLabel {
+  color: var(--di-text);
+}
+
+:is(.steam-PlayBarLabel--Container, .steam-PlaySection)
+  .steam-PlayButtonContainer:not(.steam-PlayButtonContainer--Disabled)
+  > .steam-PlayButtonContainer--ButtonChild {
+  background: var(--di-accent);
+  border-radius: var(--di-radius);
+  color: var(--di-ink);
+  text-shadow: none;
+  box-shadow: none;
+  --library-actionbutton-icon-hover-color: var(--di-ink);
+  --library-actionbutton-green-icon-hover-fill: var(--di-ink);
+}
+
+.steam-PlayBarLabel--Container .steam-PlayButtonContainer:has(> .steam-PlayButtonContainer--StreamingSelector) {
+  gap: 1px;
+}
+
+.steam-PlayBarLabel--Container .steam-PlayButtonContainer:has(> .steam-PlayButtonContainer--StreamingSelector)
+  > .steam-PlayButtonContainer--PlayButton {
+  margin-inline-end: 0;
+  border-start-end-radius: 2px;
+  border-end-end-radius: 2px;
+}
+
+.steam-PlayBarLabel--Container .steam-PlayButtonContainer > .steam-PlayButtonContainer--StreamingSelector {
+  margin-inline-start: 0;
+  border-start-start-radius: 2px;
+  border-end-start-radius: 2px;
+}
+
+:is(.steam-PlayBarLabel--Container, .steam-PlaySection)
+  .steam-PlayButtonContainer:not(.steam-PlayButtonContainer--Disabled)
+  > .steam-PlayButtonContainer--ButtonChild:hover {
+  background: var(--di-accent-hover);
+  color: var(--di-ink);
+}
+
+:is(.steam-PlayBarLabel--Container, .steam-PlaySection)
+  .steam-PlayButtonContainer:not(.steam-PlayButtonContainer--Disabled)
+  > .steam-PlayButtonContainer--ButtonChild :is(div, span, svg) {
+  color: inherit;
+}
+
+:is(.steam-PlayBarLabel--Container, .steam-PlaySection)
+  .steam-PlayButtonContainer:not(.steam-PlayButtonContainer--Disabled)
+  > .steam-PlayButtonContainer--ButtonChild :is(svg, svg path, svg polygon) {
+  fill: currentColor;
+}
+
+:is(.steam-PlayBarLabel--Container, .steam-PlaySection)
+  .steam-PlayButtonContainer:not(.steam-PlayButtonContainer--Disabled)
+  > .steam-PlayButtonContainer--ButtonChild:hover::after {
+  background: none;
+}
+
+.steam-PlayBarLabel--Container .steam-PlayBarLabel--AchievementProgressRow .steam-PlayBarLabel--DetailsProgressBar {
+  background: var(--di-accent);
+}
+
+.steam-AppDetailsSection--Highlight .steam-UnlockedLabel + div {
+  --color-blue-8: var(--di-accent);
+}
+
+.steam-AppDetailsSection--Highlight .steam-UnlockedLabel + div > div[style^="width:"] {
+  background: var(--di-accent);
+}
+
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-BackdropGlass {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--di-bg) 86%, transparent), var(--di-bg) 16rem);
+}
+
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-AppDetailsSectionContainer.steam-RightColumnSection,
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event .steam-AppActivityDay--EventBody,
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event.steam-PartnerEventTextOnly,
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-PartnerEventMediumImage_Container,
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-PartnerEventLargeImage_Container {
+  background: var(--di-card);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-card-radius);
+  box-shadow: none;
+}
+
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event.steam-PartnerEventTextOnly:hover,
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-PartnerEventMediumImage_Container:hover,
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-PartnerEventLargeImage_Container:hover {
+  background: var(--di-hover);
+}
+
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event .steam-PartnerEventFeaturedHeader {
+  background: var(--di-frame);
+  color: var(--di-accent);
+  border-bottom: 1px solid var(--di-line);
+}
+
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event:has(.steam-PartnerEventFeaturedHeader):not(:has(> .steam-PartnerEventFeaturedHeader)) {
+  background: var(--di-card);
+  border: 1px solid var(--di-line);
+  border-image: none;
+  border-radius: var(--di-card-radius);
+  box-shadow: none;
+  overflow: clip;
+}
+
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event:has(> .steam-PartnerEventFeaturedHeader) {
+  background: transparent;
+  border: 0;
+  border-image: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-LinksSection > .steam-AppDetailsSectionContainer {
+  background: var(--di-card) !important;
+  border: 1px solid var(--di-line);
+  box-shadow: none;
+}
+
+.steam-LinksSection .steam-LinksSection--Link {
+  border-radius: var(--di-radius);
+}
+
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-LinksSection .steam-LinksSection--Link:is(:hover, :focus-within) {
+  background-color: var(--di-hover);
+  color: var(--di-text);
+}
+
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-ActivityFeedContainer .steam-PostTextEntryArea {
+  background: var(--di-raised);
+  color: var(--di-text);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-radius);
+}
+
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-ActivityFeedContainer .steam-PostTextEntryArea:focus {
+  border-color: var(--di-accent);
+}
+
+@media (min-width: 1100px) and (min-height: 620px) {
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup {
+    --di-hero-edge: 16px;
+    --di-detail-edge: clamp(22px, 2vw, 30px);
+    --di-detail-gap: clamp(16px, 2vw, 28px);
+    --di-action-lift: 50px;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-TopCapsule {
+    position: relative;
+    margin: var(--di-hero-edge) var(--di-hero-edge) 0;
+    overflow: hidden;
+    border-radius: var(--di-card-radius);
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-TopCapsule--HeaderBackgroundImage {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform: none !important;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-TopCapsule--HeaderBackgroundImage >
+    .steam-TopCapsule--ImgContainer {
+    height: 100%;
+    clip-path: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-TopCapsule--ImgContainer > img {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+    mask-image: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-HeaderFeatures {
+    inset: 16px auto auto 20px;
+    justify-content: flex-start;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-PlayBarLabel--Container:has(~ .steam-LinksSection) {
+    z-index: 3;
+    margin: calc(-1 * var(--di-action-lift)) var(--di-detail-edge) 0;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-PlayBarLabel--Container:has(~ .steam-LinksSection) .steam-PlayBarLabel--GameStat {
+    border-radius: var(--di-radius);
+    background: color-mix(in srgb, var(--di-raised) 82%, transparent);
+    box-shadow: inset 0 0 0 1px var(--di-line);
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-LinksSection {
+    position: absolute;
+    inset: calc(-1 * (var(--di-action-lift) + 10px)) var(--di-detail-edge) auto max(34%, 280px);
+    transform: translateY(-100%);
+    z-index: 2;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-LinksSection > .steam-AppDetailsSectionContainer {
+    margin: 0;
+    background: transparent !important;
+    border: 0;
+    box-shadow: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-LinksSection .steam-LinksSection--Links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 6px;
+    width: 100%;
+    height: auto !important;
+    padding: 0;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-LinksSection .steam-LinksSection--Link {
+    display: flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 0 12px;
+    border-radius: 999px;
+    background: var(--di-overlay-bg);
+    border: 1px solid var(--di-line);
+    color: var(--di-text);
+    font-weight: 600;
+    pointer-events: auto;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-LinksSection .steam-LinksSection--Link:hover {
+    background: var(--di-hover);
+    border-color: var(--di-line-strong);
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-LinksSection .steam-LinksSection--LinkInner {
+    position: static !important;
+    display: block;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-LinksSection .steam-LinksSection--Link > span {
+    color: inherit;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup
+    .steam-Spotlights--ColumnContainer:has(> .steam-Spotlights--LeftColumn):has(> .steam-Spotlights--RightColumn) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) min(38%, 480px);
+    grid-template-rows: auto minmax(0, 1fr);
+    align-items: start;
+    column-gap: var(--di-detail-gap);
+    padding: 24px var(--di-detail-edge) 0;
+    background: transparent;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup
+    .steam-Spotlights--ColumnContainer > :is(.steam-Spotlights, .steam-Spotlights--LeftColumn, .steam-Spotlights--RightColumn) {
+    width: auto !important;
+    min-width: 0;
+    max-width: none;
+    margin: 0 !important;
+    float: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Spotlights--ColumnContainer > .steam-Spotlights {
+    grid-area: 1 / 1;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Spotlights--ColumnContainer > .steam-Spotlights--LeftColumn {
+    grid-area: 1 / 1 / span 2;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup
+    .steam-Spotlights--ColumnContainer:has(> .steam-Spotlights:not(:empty)) > .steam-Spotlights--LeftColumn {
+    grid-area: 2 / 1;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Spotlights--ColumnContainer > .steam-Spotlights--RightColumn {
+    grid-area: 1 / 2 / span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Spotlights--RightColumn > .steam-Spotlights--SeekTarget:empty {
+    display: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Spotlights--LeftColumn .steam-ActivityFeedContainer,
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup
+    .steam-Spotlights--RightColumn > .steam-Spotlights--SeekTarget > .steam-AppDetailsSection {
+    box-sizing: border-box;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: clamp(12px, 1.35vw, 22px);
+    border: 1px solid var(--di-line);
+    border-radius: var(--di-card-radius);
+    background: var(--di-card);
+    box-shadow: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Spotlights--LeftColumn .steam-ActivityFeedContainer {
+    margin-block-end: var(--di-detail-gap);
+    padding-inline: clamp(16px, 1.6vw, 26px);
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event:has(.steam-PartnerEventFeaturedHeader) {
+    background: var(--di-raised);
+    border-color: var(--di-line-strong);
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event .steam-PartnerEventFeaturedHeader {
+    background: none;
+    border: 0;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event:has(.steam-PartnerEventFeaturedHeader)
+    :is(.steam-PartnerEventMediumImage_Container, .steam-PartnerEventLargeImage_Container) {
+    border: 0;
+    background: transparent;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-Event:has(.steam-PartnerEventFeaturedHeader)
+    :is(.steam-PartnerEventMediumImage_Contents, .steam-PartnerEventLargeImage_Contents) {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(12px, 1.2vw, 20px);
+    height: auto;
+    padding: 0 12px 12px;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-Event:has(.steam-PartnerEventFeaturedHeader)
+    :is(.steam-PartnerEventMediumImage_Contents, .steam-PartnerEventLargeImage_Contents) >
+    :has(img:is(.steam-PartnerEventMediumImage_Image, .steam-PartnerEventLargeImage_Image)) {
+    position: relative;
+    flex: 0 0 min(40%, 320px);
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: var(--di-cover-radius);
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-Event:has(.steam-PartnerEventFeaturedHeader)
+    img:is(.steam-PartnerEventMediumImage_Image, .steam-PartnerEventLargeImage_Image) {
+    position: static;
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-Event:has(.steam-PartnerEventFeaturedHeader)
+    :is(.steam-PartnerEventMediumImage_Contents, .steam-PartnerEventLargeImage_Contents) >
+    :has(> :is(.steam-PartnerEventMediumImage_Summary, .steam-PartnerEventLargeImage_Summary)) {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-Event:has(.steam-PartnerEventFeaturedHeader)
+    :is(.steam-PartnerEventMediumImage_Summary, .steam-PartnerEventLargeImage_Summary) {
+    display: -webkit-box;
+    max-height: none;
+    line-height: 1.4;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup
+    :is(.steam-Spotlights--RightColumn, .steam-ActivityFeedContainer) .steam-SectionHeader--LabelText {
+    color: var(--di-text);
+    font-family: var(--di-font-display);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: none;
+  }
+
+  html:not([data-theme-layout="classic"]) .steam-LeftListMaxPercentage--AppDetailsTransitionGroup
+    .steam-Spotlights--RightColumn .steam-AppDetailsSectionContainer.steam-RightColumnSection {
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+:root .steam-AppGameInfoContainer {
+  background: var(--di-card);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-card-radius);
+}
+
+.steam-AppActionButton {
+  border-radius: var(--di-radius);
+}
+
+:has(> .steam-DownloadsPage--TopBar + .steam-ItemListWrapper) {
+  background: var(--di-bg);
+}
+
+:has(> .steam-DownloadsPage--TopBar + .steam-ItemListWrapper) > :has(.steam-DownloadGraphWrapper),
 .steam-GraphAndStats,
-.steam-GraphAndStats--HeroAndLogo,
-.steam-GraphAndStats--HeroGradient,
-.steam-GraphAndStats--Gradient {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--di-accent) 14%, var(--di-frame)), var(--di-bg)) !important;
+.steam-DownloadsPage--Section.steam-DownloadsPage--Active.steam-DownloadsPage--Empty,
+.steam-DownloadsPage--Section.steam-DownloadsPage--Active.steam-DownloadsPage--Empty .steam-DownloadsPage--RightSection {
+  background: var(--di-frame);
 }
 
-.steam-DownloadsPage--Section,
-.steam-DownloadsPage--SectionItemWrapper,
-.steam-DownloadsPage--Active,
-.steam-DownloadsPage--Empty,
-.steam-DownloadGraphWrapper,
-.steam-GraphAndStats--DownloadGraphStatsWrapper,
-.steam-SectionItem {
-  background: var(--di-card-grad) !important;
-  border: 1px solid var(--di-line) !important;
-  border-radius: var(--di-card-radius) !important;
+.steam-GraphAndStats .steam-GraphAndStats--HeroAndLogo.steam-GraphAndStats--Empty {
+  background: transparent;
 }
 
-.steam-DownloadsPage--Active {
-  border-color: var(--di-line-strong) !important;
-  box-shadow: inset 3px 0 0 var(--di-accent), var(--di-glow-sm);
+.steam-GraphAndStats .steam-GraphAndStats--HeroAndLogo .steam-GraphAndStats--HeroGradient {
+  background: linear-gradient(90deg, transparent 30%, var(--di-overlay-bg) 90%);
+  mask-image: linear-gradient(90deg, transparent 30%, black 90%);
+  mix-blend-mode: normal;
 }
 
-.steam-DownloadsPage--ProgressBar {
-  background: linear-gradient(90deg, var(--di-accent), var(--di-accent-hover)) !important;
-  border-radius: 999px;
+.steam-GraphAndStats .steam-GraphAndStats--HeroAndLogo.steam-GraphAndStats--Empty .steam-GraphAndStats--HeroGradient {
+  background: transparent;
 }
 
-.steam-DownloadsPage--Button,
-.steam-GraphAndStats--SettingsButton {
+.steam-GraphAndStats .steam-GraphAndStats--Gradient {
+  background-image: linear-gradient(90deg, var(--di-frame) 35%, transparent 55%);
+}
+
+.steam-DownloadsPage--ActiveItemRightColumn .steam-GraphAndStats--DownloadGraphStatsWrapper {
+  background: var(--di-card);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-card-radius);
+  padding: 8px 12px;
+}
+
+.steam-GraphAndStats--DownloadGraphStats .steam-GraphAndStats--Figure {
+  color: var(--di-text);
+  font-family: var(--di-font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.steam-GraphAndStats .steam-GraphAndStats--DownloadGraph .steam-GraphAndStats--GraphBar {
+  color: var(--di-accent);
+}
+
+.steam-GraphAndStats .steam-GraphAndStats--DownloadGraph .steam-GraphAndStats--GraphLine {
+  stroke: var(--di-text-muted);
+}
+
+.steam-GraphAndStats--DownloadGraphStats .steam-GraphAndStats--LegendBox > svg {
+  color: var(--di-accent);
+}
+
+.steam-GraphAndStats--DownloadGraphStats .steam-GraphAndStats--LegendBox.steam-GraphAndStats--Disk {
+  background-color: var(--di-text-muted);
+}
+
+.steam-GraphAndStats--SettingsButton .DialogButton:enabled,
+.steam-ItemListWrapper .steam-DownloadsPage--Button.DialogButton:enabled {
   background: var(--di-raised) !important;
-  border: 1px solid var(--di-line) !important;
-  border-radius: var(--di-radius) !important;
-  color: var(--di-text) !important;
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-radius);
+  color: var(--di-text);
 }
 
-.steam-DownloadsPage--Button:hover,
-.steam-GraphAndStats--SettingsButton:hover {
+.steam-GraphAndStats--SettingsButton .DialogButton:enabled:hover,
+.steam-ItemListWrapper .steam-DownloadsPage--Button.DialogButton:enabled:hover {
   background: var(--di-hover) !important;
-  border-color: var(--di-line-strong) !important;
-  color: var(--di-accent) !important;
 }
 
-.steam-GraphAndStats--GraphBar {
-  fill: var(--di-accent) !important;
+.steam-DownloadsPage--TopBar {
+  background: var(--di-line);
 }
 
-.steam-GraphAndStats--GraphLine {
-  stroke: var(--di-accent-secondary) !important;
+.steam-ItemListWrapper .steam-SectionItem {
+  background: var(--di-card);
+  border-radius: var(--di-radius);
 }
 
-.steam-GraphAndStats--Figure,
-.steam-GraphAndStats--DownloadGraphStats,
-.steam-SectionItemStatus {
-  color: var(--di-text) !important;
+.steam-ItemListWrapper .steam-SectionItem:focus-within,
+.steam-ItemListWrapper .steam-SectionItem:hover {
+  background: var(--di-hover);
 }
 
-.steam-GraphAndStats--Disk,
-.steam-GraphAndStats--LegendBox,
-.steam-GraphAndStats--Empty,
-.steam-DownloadsPage--ActiveItemRightColumn,
-.steam-DownloadsPage--RightSection {
-  color: var(--di-text-muted) !important;
+.steam-DownloadsPage--SectionItemWrapper.gpfocus .steam-SectionItem.steam-DownloadsPage--Active {
+  background: var(--di-raised);
+  box-shadow: inset 2px 0 0 var(--di-accent);
+}
+
+.steam-SectionItemStatus .steam-DownloadsPage--ProgressBar {
+  background-color: var(--di-raised);
+}
+
+.steam-SectionItemStatus .steam-DownloadsPage--ProgressBar > div {
+  background-color: var(--di-accent);
+}
+
+.steam-DownloadGraphWrapper,
+.steam-DownloadStatusContainer {
+  background: var(--di-card);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-card-radius);
+}
+
+.steam-DownloadsPage--Active.steam-DownloadsPage--Empty .steam-DownloadGraphWrapper {
+  background: transparent;
+  border-color: transparent;
+}
+
+.steam-UpdateDownloadProgress {
+  accent-color: var(--di-accent);
+}
+
+.steam-HeaderDownloadContainer .steam-HeaderAppPortraitContainer
+  .steam-HeaderDownloadProgressBarBackground .steam-HeaderDownloadProgressBar {
+  background-color: var(--di-accent);
+}
+
+.steam-BottomBarContainer--BottomBar {
+  background-color: var(--di-frame);
+  border-top: 1px solid var(--di-line);
 }

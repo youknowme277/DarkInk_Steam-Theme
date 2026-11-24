@@ -5,11 +5,10 @@ body.ModalDialogBody {
 
 .steam-DialogContent:has(.steam-DialogButtonRow),
 .steam-AppProperties {
-  background: var(--di-glass-glint), var(--di-glass) !important;
-  backdrop-filter: var(--di-material);
-  border: 1px solid var(--di-glass-edge);
+  background: var(--di-card);
+  border: 1px solid var(--di-line);
   border-radius: var(--di-card-radius);
-  box-shadow: var(--di-glass-shadow);
+  box-shadow: none;
 }
 
 .steam-DialogButtonRow {

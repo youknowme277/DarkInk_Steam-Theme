@@ -2,9 +2,9 @@
   "schema": 1,
   "type": "theme",
   "name": "DarkInk",
-  "description": "Obsidian-dark Steam theme with DarkInk cyan glow, frosted glass surfaces, 4 presets, and full 12-window coverage.",
-  "version": "1.0.0",
+  "description": "Clean flat obsidian Steam theme with DarkInk cyan accents, custom sidebar navigation layout, 4 presets, and full 12-window coverage.",
+  "version": "1.1.0",
   "license": "MIT",
   "preview": "assets/preview.png",
-  "tags": ["dark", "cyan", "glass", "modern", "minimal"]
+  "tags": ["dark", "cyan", "flat", "modern", "minimal"]
 }

@@ -39,20 +39,20 @@ h3 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: color-mix(in srgb, var(--di-accent) 42%, transparent);
-  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: var(--di-radius);
 }
 
 ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+html[data-theme-scrollbar="accent"] ::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--di-accent) 46%, transparent);
+}
+
+html[data-theme-scrollbar="accent"] ::-webkit-scrollbar-thumb:hover {
   background: color-mix(in srgb, var(--di-accent) 76%, transparent);
-}
-
-html[data-theme-scrollbar="minimal"] ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.16);
-}
-
-html[data-theme-scrollbar="minimal"] ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
 }
 
 html[data-theme-scrollbar="hidden"] ::-webkit-scrollbar {

@@ -1,57 +1,34 @@
 :root {
   --di-accent: var(--accent, #00bfcf);
-  --di-accent-secondary: var(--accent-secondary, #8b5cf6);
-  --di-accent-hover: color-mix(in srgb, var(--di-accent) 82%, #ffffff);
-  --di-accent-deep: color-mix(in srgb, var(--di-accent) 72%, #000000);
+  --di-accent-hover: color-mix(in srgb, var(--di-accent) 88%, #ffffff);
   --di-ink: var(--accent-ink, #041216);
-  --di-frame: var(--surface-strong, #070a0e);
+  --di-frame: var(--surface-strong, #080b10);
   --di-bg: var(--surface, #0b0f14);
-  --di-card: var(--surface-card, #121923);
-  --di-card-grad: linear-gradient(145deg, color-mix(in srgb, var(--di-card) 96%, #1f2b3d), color-mix(in srgb, var(--di-card) 98%, #070a0e));
-  --di-raised: var(--surface-raised, #192231);
-  --di-hover: color-mix(in srgb, var(--di-accent) 10%, var(--di-raised));
+  --di-card: var(--surface-card, #121821);
+  --di-raised: var(--surface-raised, #19222e);
+  --di-hover: color-mix(in srgb, #ffffff 6%, var(--di-raised));
   --di-text: var(--text, #e6eef6);
   --di-text-muted: var(--text-muted, #94a3b8);
   --di-ingame: var(--ingame, #34d399);
   --di-online: var(--online, #38bdf8);
   --di-line: rgba(255, 255, 255, 0.08);
-  --di-line-strong: color-mix(in srgb, var(--di-accent) 38%, rgba(255, 255, 255, 0.1));
+  --di-line-strong: color-mix(in srgb, var(--di-accent) 42%, rgba(255, 255, 255, 0.1));
   --di-tint-soft: color-mix(in srgb, var(--di-accent) 10%, transparent);
   --di-tint-mid: color-mix(in srgb, var(--di-accent) 18%, transparent);
-  --di-tint-violet: color-mix(in srgb, var(--di-accent-secondary) 14%, transparent);
-  --di-glow-sm: 0 0 14px color-mix(in srgb, var(--di-accent) 26%, transparent);
-  --di-glow-md: 0 6px 24px -6px color-mix(in srgb, var(--di-accent) 34%, transparent);
-  --di-radius: var(--radius, 10px);
-  --di-card-radius: calc(var(--radius, 10px) + 4px);
-  --di-cover-radius: var(--cover-radius, 10px);
-  --di-glass: color-mix(in srgb, var(--di-frame) 74%, transparent);
-  --di-glass-glint: linear-gradient(155deg, rgba(255, 255, 255, 0.075), color-mix(in srgb, var(--di-accent) 4%, transparent) 42%, transparent 72%);
-  --di-material: blur(20px) saturate(160%);
-  --di-glass-edge: color-mix(in srgb, var(--di-accent) 16%, rgba(255, 255, 255, 0.08));
-  --di-glass-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07), 0 16px 40px -16px rgba(0, 0, 0, 0.88);
+  --di-radius: var(--radius, 8px);
+  --di-card-radius: calc(var(--radius, 8px) + 4px);
+  --di-cover-radius: var(--cover-radius, 8px);
+  --di-overlay-bg: color-mix(in srgb, var(--di-frame) 88%, transparent);
   --di-font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --di-font-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-}
-
-html[data-theme-glass="off"] {
-  --di-glass: var(--di-frame);
-  --di-glass-glint: none;
-  --di-material: none;
-}
-
-html[data-theme-glass="strong"] {
-  --di-glass: color-mix(in srgb, var(--di-frame) 56%, transparent);
-  --di-material: blur(28px) saturate(185%);
 }
 
 html[data-theme-border-strength="none"] {
   --di-line: transparent;
   --di-line-strong: transparent;
-  --di-glass-edge: transparent;
 }
 
 html[data-theme-border-strength="accent"] {
-  --di-line: color-mix(in srgb, var(--di-accent) 24%, transparent);
-  --di-line-strong: color-mix(in srgb, var(--di-accent) 56%, transparent);
-  --di-glass-edge: color-mix(in srgb, var(--di-accent) 34%, transparent);
+  --di-line: color-mix(in srgb, var(--di-accent) 22%, transparent);
+  --di-line-strong: color-mix(in srgb, var(--di-accent) 50%, transparent);
 }

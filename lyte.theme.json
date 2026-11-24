@@ -19,47 +19,51 @@
       "id": "preset",
       "type": "select",
       "label": "Theme preset",
-      "description": "Switch between DarkInk color atmospheres.",
+      "description": "Switch between DarkInk color palettes.",
       "group": "Presets",
       "default": "classic",
       "choices": [
         { "value": "classic", "label": "DarkInk Classic" },
         { "value": "abyss", "label": "DarkInk Abyss (OLED)", "file": "styles/presets/abyss.css" },
-        { "value": "violet", "label": "DarkInk Neon Violet", "file": "styles/presets/violet.css" },
-        { "value": "crimson", "label": "DarkInk Bloodmoon", "file": "styles/presets/crimson.css" }
+        { "value": "violet", "label": "DarkInk Violet", "file": "styles/presets/violet.css" },
+        { "value": "crimson", "label": "DarkInk Crimson", "file": "styles/presets/crimson.css" }
+      ]
+    },
+    {
+      "id": "layout",
+      "type": "select",
+      "label": "Window layout",
+      "description": "DarkInk custom sidebar rail or standard Steam top bar.",
+      "group": "Shape & Layout",
+      "default": "rail",
+      "choices": [
+        { "value": "rail", "label": "DarkInk Sidebar Rail" },
+        { "value": "classic", "label": "Classic Steam Bar" }
       ]
     },
     {
       "id": "accent",
       "type": "color",
       "label": "Accent color",
-      "description": "Primary DarkInk cyan highlights, active rails, buttons and badges.",
+      "description": "Primary DarkInk cyan highlights, active pills, buttons and badges.",
       "group": "Colors",
       "default": "#00bfcf"
-    },
-    {
-      "id": "accent-secondary",
-      "type": "color",
-      "label": "Secondary glow",
-      "description": "Ambient dual-tone spotlight paired with the primary accent.",
-      "group": "Colors",
-      "default": "#8b5cf6"
     },
     {
       "id": "accent-ink",
       "type": "color",
       "label": "Text on accent",
-      "description": "Text and icons on primary accent buttons and discount badges.",
+      "description": "Text and icons on primary accent pills and buttons.",
       "group": "Colors",
       "default": "#041216"
     },
     {
       "id": "surface-strong",
       "type": "color",
-      "label": "Frame and bar color",
-      "description": "Top bar, bottom bar, sidebars, menus and web headers.",
+      "label": "Frame color",
+      "description": "Outer shell, top bar, sidebar frame and web headers.",
       "group": "Colors",
-      "default": "#070a0e"
+      "default": "#080b10"
     },
     {
       "id": "surface",
@@ -73,17 +77,17 @@
       "id": "surface-card",
       "type": "color",
       "label": "Card surface",
-      "description": "Shelves, settings rows, dialogs, toast cards and info panels.",
+      "description": "Section cards, shelves, settings rows, dialogs and menus.",
       "group": "Colors",
-      "default": "#121923"
+      "default": "#121821"
     },
     {
       "id": "surface-raised",
       "type": "color",
       "label": "Control surface",
-      "description": "Buttons, search inputs, pills and hovered cards.",
+      "description": "Buttons, inputs, pills and hovered items.",
       "group": "Colors",
-      "default": "#192231"
+      "default": "#19222e"
     },
     {
       "id": "text",
@@ -121,13 +125,13 @@
       "id": "radius",
       "type": "slider",
       "label": "Corner radius",
-      "description": "Roundness of buttons, inputs, menus and cards.",
+      "description": "Roundness of buttons, inputs, menus and controls.",
       "group": "Shape & Layout",
       "min": 0,
-      "max": 16,
+      "max": 14,
       "step": 1,
       "unit": "px",
-      "default": 10
+      "default": 8
     },
     {
       "id": "cover-radius",
@@ -139,25 +143,25 @@
       "max": 16,
       "step": 1,
       "unit": "px",
-      "default": 10
+      "default": 8
     },
     {
       "id": "sidebar-width",
       "type": "slider",
       "label": "Sidebar width",
-      "description": "Minimum width of the Library game list sidebar.",
+      "description": "Width of the Library navigation and game list rail.",
       "group": "Shape & Layout",
       "min": 220,
       "max": 360,
       "step": 10,
       "unit": "px",
-      "default": 270
+      "default": 260
     },
     {
       "id": "density",
       "type": "select",
       "label": "Navigation size",
-      "description": "Text size and spacing of the top navigation bar.",
+      "description": "Text size of navigation items.",
       "group": "Shape & Layout",
       "default": "regular",
       "choices": [
@@ -170,12 +174,12 @@
       "id": "shelf-style",
       "type": "select",
       "label": "Library shelves",
-      "description": "Framed DarkInk glass cards or clean open shelves.",
+      "description": "Open shelves or framed card containers on Library Home.",
       "group": "Shape & Layout",
-      "default": "cards",
+      "default": "clean",
       "choices": [
-        { "value": "cards", "label": "Framed DarkInk cards" },
-        { "value": "clean", "label": "Clean open shelves" }
+        { "value": "clean", "label": "Clean open" },
+        { "value": "cards", "label": "Framed cards" }
       ]
     },
     {
@@ -188,7 +192,7 @@
       "choices": [
         { "value": "none", "label": "None" },
         { "value": "subtle", "label": "Subtle hairline" },
-        { "value": "accent", "label": "Cyan tinted" }
+        { "value": "accent", "label": "Accent tinted" }
       ]
     },
     {
@@ -203,52 +207,23 @@
       ]
     },
     {
-      "id": "glow",
-      "type": "toggle",
-      "label": "Ambient dual-tone glow",
-      "description": "Soft cyan and violet spotlight behind Library and game headers.",
-      "group": "Effects",
-      "default": true
-    },
-    {
-      "id": "pattern",
-      "type": "toggle",
-      "label": "DarkInk background motif",
-      "description": "Subtle obsidian dot-grid and crescent ink texture on Library Home.",
-      "group": "Effects",
-      "default": true
-    },
-    {
-      "id": "glass",
-      "type": "select",
-      "label": "Frosted glass",
-      "description": "Backdrop blur behind menus, dialogs, toasts and floating panels.",
-      "group": "Effects",
-      "default": "light",
-      "choices": [
-        { "value": "off", "label": "Off" },
-        { "value": "light", "label": "Light" },
-        { "value": "strong", "label": "Strong" }
-      ]
-    },
-    {
       "id": "cover-lift",
       "type": "toggle",
-      "label": "Cover hover lift & glow",
-      "description": "Lifts game covers with a subtle cyan rim highlight on hover.",
-      "group": "Effects",
+      "label": "Cover hover lift",
+      "description": "Gently lifts game covers on hover.",
+      "group": "Shape & Layout",
       "default": true
     },
     {
       "id": "scrollbar",
       "type": "select",
       "label": "Scrollbar style",
-      "description": "Scrollbar appearance across all Steam windows.",
-      "group": "Effects",
-      "default": "accent",
+      "description": "Scrollbar look across all Steam windows.",
+      "group": "Shape & Layout",
+      "default": "minimal",
       "choices": [
-        { "value": "accent", "label": "DarkInk cyan thumb" },
         { "value": "minimal", "label": "Minimal neutral" },
+        { "value": "accent", "label": "Accent thumb" },
         { "value": "hidden", "label": "Hidden" }
       ]
     }

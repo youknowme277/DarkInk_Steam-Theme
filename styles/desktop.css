@@ -21,7 +21,7 @@ button.DialogButton:enabled,
   border-radius: var(--di-radius);
   box-shadow: none;
   color: var(--di-text);
-  transition: background-color 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+  transition: background-color 0.14s ease, border-color 0.14s ease;
 }
 
 button.DialogButton:enabled:hover,
@@ -33,28 +33,26 @@ button.DialogButton:enabled:hover,
 
 button.DialogButton:is(.Primary, .GreenPlay),
 button.DialogButton:is(.Primary, .GreenPlay):enabled {
-  background: linear-gradient(135deg, var(--di-accent), var(--di-accent-hover)) !important;
+  background: var(--di-accent) !important;
   border-color: transparent !important;
+  box-shadow: none !important;
   color: var(--di-ink) !important;
-  font-weight: 700;
-  box-shadow: var(--di-glow-sm);
+  font-weight: 600;
 }
 
 button.DialogButton:is(.Primary, .GreenPlay):enabled:hover {
-  background: linear-gradient(135deg, var(--di-accent-hover), var(--di-accent)) !important;
-  box-shadow: var(--di-glow-md);
+  background: var(--di-accent-hover) !important;
 }
 
 button.DialogButton:is(.Primary, .GreenPlay):disabled {
   opacity: 0.55;
-  box-shadow: none;
 }
 
 .steam-BottomBarContainer--AddGameButton,
 .steam-FriendsButton,
 .steam-DownloadPauseButton {
   border-radius: var(--di-radius);
-  transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease;
+  transition: background-color 0.14s ease, color 0.14s ease;
 }
 
 .steam-BottomBarContainer--AddGameButton:hover,
@@ -65,11 +63,10 @@ button.DialogButton:is(.Primary, .GreenPlay):disabled {
 }
 
 .steam-AddNonSteamGameDialog {
-  background: var(--di-glass-glint), var(--di-glass) !important;
-  backdrop-filter: var(--di-material);
-  border: 1px solid var(--di-glass-edge);
+  background: var(--di-card) !important;
+  border: 1px solid var(--di-line);
   border-radius: var(--di-card-radius);
-  box-shadow: var(--di-glass-shadow);
+  box-shadow: none;
   color: var(--di-text);
 }
 
@@ -91,7 +88,7 @@ button.DialogButton:is(.Primary, .GreenPlay):disabled {
 }
 
 .steam-AddNonSteamGameDialogContent .steam-AddNonSteamGameDialog--GameList {
-  background: var(--di-card-grad);
+  background: var(--di-bg);
   box-shadow: none;
   border: 1px solid var(--di-line);
   border-radius: var(--di-card-radius);
@@ -106,5 +103,5 @@ button.DialogButton:is(.Primary, .GreenPlay):disabled {
 
 .steam-AddNonSteamGameDialogContent .steam-AddNonSteamGameDialog--GameRow:has(input:checked) {
   background-color: var(--di-tint-soft);
-  box-shadow: inset 3px 0 0 var(--di-accent);
+  box-shadow: inset 2px 0 0 var(--di-accent);
 }

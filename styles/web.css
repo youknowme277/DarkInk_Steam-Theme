@@ -12,7 +12,7 @@ body {
 
 .help_main_block,
 .help_wizard_button {
-  background: var(--di-card-grad) !important;
+  background: var(--di-card) !important;
   border: 1px solid var(--di-line) !important;
   border-radius: var(--di-radius) !important;
 }

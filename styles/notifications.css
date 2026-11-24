@@ -3,32 +3,30 @@
 }
 
 .steam-DesktopToastPopup {
-  background: var(--di-glass-glint), var(--di-glass) !important;
-  backdrop-filter: var(--di-material);
-  border: 1px solid var(--di-glass-edge) !important;
-  border-left: 3px solid var(--di-accent) !important;
-  border-radius: var(--di-card-radius) !important;
-  box-shadow: var(--di-glass-shadow), var(--di-glow-sm) !important;
+  background: var(--di-card);
+  border: 1px solid var(--di-line);
+  border-left: 3px solid var(--di-accent);
+  border-radius: var(--di-card-radius);
+  box-shadow: none;
   font-family: var(--di-font-body);
 }
 
 .steam-DesktopToastPopup::before {
-  background: linear-gradient(125deg, var(--di-tint-mid), transparent 70%);
-  border-radius: inherit;
+  background: none;
 }
 
 .steam-DesktopToastPopup .steam-DesktopToastBackground,
 .steam-DesktopToastPopup:hover .steam-DesktopToastBackground {
-  color: var(--di-accent) !important;
+  color: var(--di-accent);
 }
 
 .steam-ShortTemplate--Title {
-  color: var(--di-text) !important;
+  color: var(--di-text);
   font-family: var(--di-font-display);
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
 .steam-ShortTemplate--StandardTemplateContainer .steam-ShortTemplate--Content > .steam-ShortTemplate--Header + div {
-  color: var(--di-text-muted) !important;
+  color: var(--di-text-muted);
 }

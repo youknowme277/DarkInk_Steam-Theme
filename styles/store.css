@@ -1,7 +1,7 @@
 body.v6,
 .home_page_body_ctn,
 .game_page_background {
-  background-color: var(--di-bg) !important;
+  background: var(--di-bg) !important;
   color: var(--di-text);
 }
 
@@ -11,17 +11,9 @@ body.v6,
   border-bottom: 1px solid var(--di-line);
 }
 
-.store_nav .tab:hover > span,
-.store_nav .tab.focus > span {
-  background: var(--di-tint-soft) !important;
-  color: var(--di-accent) !important;
-  border-radius: var(--di-radius);
-}
-
 .page_content_ctn,
 .tab_item,
-.game_area_purchase_game,
-.block_content {
+.game_area_purchase_game {
   border-radius: var(--di-radius);
 }
 
@@ -34,28 +26,27 @@ body.v6,
 .tab_item,
 .search_result_row,
 .game_area_purchase_game {
-  background: var(--di-card-grad) !important;
+  background: var(--di-card) !important;
   border: 1px solid var(--di-line);
 }
 
 .tab_item.focus,
 .search_result_row:hover {
   background: var(--di-hover) !important;
-  border-color: var(--di-line-strong);
   box-shadow: inset 3px 0 0 var(--di-accent);
 }
 
 .discount_pct {
-  background: linear-gradient(135deg, var(--di-accent), var(--di-accent-hover)) !important;
+  background: var(--di-accent) !important;
   color: var(--di-ink) !important;
   font-weight: 700;
-  border-radius: calc(var(--di-radius) - 2px);
+  border-radius: var(--di-radius);
 }
 
 .btn_green_steamui > span {
-  background: linear-gradient(135deg, var(--di-accent), var(--di-accent-hover)) !important;
+  background: var(--di-accent) !important;
   color: var(--di-ink) !important;
-  font-weight: 700;
+  font-weight: 600;
   border-radius: var(--di-radius);
 }
 

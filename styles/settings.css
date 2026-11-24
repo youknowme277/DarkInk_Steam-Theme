@@ -3,12 +3,12 @@ body.ModalDialogBody,
 .steam-ResponsivePageList--PagedSettingsDialog,
 .steam-ResponsivePageList--PagedSettingsDialog_PageContent,
 .steam-ResponsivePageList--PagedSettingDialog_ContentColumn {
-  background: var(--di-bg) !important;
+  background: var(--di-bg);
   color: var(--di-text);
 }
 
 .steam-ResponsivePageList--PagedSettingsDialog_PageListColumn {
-  background: var(--di-frame) !important;
+  background: var(--di-frame);
   border-right: 1px solid var(--di-line);
 }
 
@@ -19,7 +19,7 @@ body.ModalDialogBody,
 .steam-ResponsivePageList--PagedSettingsDialog_PageListItem {
   border-radius: var(--di-radius);
   color: var(--di-text-muted);
-  transition: background-color 0.16s ease, color 0.16s ease, box-shadow 0.16s ease;
+  transition: background-color 0.14s ease, color 0.14s ease;
 }
 
 .steam-ResponsivePageList--PagedSettingsDialog_PageListItem:hover {
@@ -29,8 +29,8 @@ body.ModalDialogBody,
 
 .steam-ResponsivePageList--PagedSettingsDialog_PageListItem.steam-ResponsivePageList--Active,
 .steam-PagedSettingsDialog_PageList_ShowTitle--Active {
-  background: var(--di-tint-soft) !important;
-  color: var(--di-text) !important;
+  background: var(--di-card);
+  color: var(--di-text);
   box-shadow: inset 3px 0 0 var(--di-accent);
 }
 
@@ -45,9 +45,10 @@ section[id^="lyte-settings-"][role="tabpanel"] {
 }
 
 section[id^="lyte-settings-"] :is(.lyte-setting, .lyte-summary, .lyte-preference, .lyte-package, .lyte-install, .lyte-folder-row, .lyte-empty, .lyte-hero) {
-  background: var(--di-glass-glint), var(--di-card-grad) !important;
+  background: var(--di-card) !important;
   border: 1px solid var(--di-line) !important;
   border-radius: var(--di-card-radius) !important;
+  box-shadow: none !important;
 }
 
 section[id^="lyte-settings-"] .lyte-option {
@@ -61,6 +62,7 @@ section[id^="lyte-settings-"] :is(button:not(.lyte-dropdown-option, [role="switc
   color: var(--di-text) !important;
   border: 1px solid var(--di-line) !important;
   border-radius: var(--di-radius) !important;
+  box-shadow: none !important;
 }
 
 section[id^="lyte-settings-"] :is(button:enabled:not(.lyte-dropdown-option, [role="switch"]), a.lyte-button):hover {
@@ -69,10 +71,10 @@ section[id^="lyte-settings-"] :is(button:enabled:not(.lyte-dropdown-option, [rol
 }
 
 section[id^="lyte-settings-"] .lyte-install button[type="submit"]:enabled {
-  background: linear-gradient(135deg, var(--di-accent), var(--di-accent-hover)) !important;
+  background: var(--di-accent) !important;
   border-color: transparent !important;
   color: var(--di-ink) !important;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 section[id^="lyte-settings-"] :is(a, button, select, input):focus-visible {
@@ -84,16 +86,15 @@ section[id^="lyte-settings-"] .lyte-dropdown-arrow {
 }
 
 section[id^="lyte-settings-"] .lyte-dropdown-menu {
-  background: var(--di-glass-glint), var(--di-glass) !important;
-  backdrop-filter: var(--di-material);
-  border: 1px solid var(--di-glass-edge) !important;
+  background: var(--di-card) !important;
+  border: 1px solid var(--di-line) !important;
   border-radius: var(--di-card-radius) !important;
-  box-shadow: var(--di-glass-shadow) !important;
+  box-shadow: none !important;
   padding: 4px !important;
 }
 
 section[id^="lyte-settings-"] .lyte-dropdown-option {
-  border-radius: calc(var(--di-radius) - 2px) !important;
+  border-radius: var(--di-radius) !important;
 }
 
 section[id^="lyte-settings-"] .lyte-dropdown-option[aria-selected="true"],
@@ -103,5 +104,5 @@ section[id^="lyte-settings-"] .lyte-dropdown-option:hover:enabled {
 }
 
 section[id^="lyte-settings-"] .lyte-dropdown-option[aria-selected="true"] {
-  box-shadow: inset 3px 0 0 var(--di-accent);
+  box-shadow: inset 2px 0 0 var(--di-accent);
 }
