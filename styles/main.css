@@ -339,14 +339,27 @@ html[data-theme-cover-lift="true"] .steam-LibraryItemBox:hover {
 }
 
 .steam-PlayBarLabel--Container .steam-PlayBarLabel--GameStatsSection {
-  gap: 8px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  height: auto !important;
+  overflow: visible !important;
 }
 
 .steam-PlayBarLabel--Container .steam-PlayBarLabel--GameStat {
-  background: var(--di-card);
-  border-radius: var(--di-radius);
-  box-shadow: inset 0 0 0 1px var(--di-line);
-  padding-inline: clamp(8px, 0.9vw, 14px);
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  max-height: 42px !important;
+  margin: 0 !important;
+  padding: 4px clamp(10px, 0.9vw, 14px) !important;
+  background: var(--di-card) !important;
+  border: 1px solid var(--di-line) !important;
+  border-radius: var(--di-radius) !important;
+  box-shadow: none !important;
+  overflow: hidden;
 }
 
 .steam-PlayBarLabel--Container .steam-PlayBarLabel--GameStat .steam-PlayBarLabel {
@@ -354,7 +367,12 @@ html[data-theme-cover-lift="true"] .steam-LibraryItemBox:hover {
 }
 
 .steam-PlayBarLabel--Container .steam-PlayBarLabel--GameStat .steam-PlayBarLabel--GameStatIcon {
-  color: var(--di-accent);
+  color: var(--di-accent) !important;
+}
+
+.steam-PlayBarLabel--Container .steam-PlayBarLabel--GameStat .steam-PlayBarLabel--GameStatIcon :is(svg, path, circle, polygon, rect) {
+  color: var(--di-accent) !important;
+  fill: var(--di-accent) !important;
 }
 
 .steam-PlayBarLabel--Container .steam-PlayBarLabel--GameStat .steam-PlayBarLabel--PlayBarDetailLabel {
@@ -368,7 +386,7 @@ html[data-theme-cover-lift="true"] .steam-LibraryItemBox:hover {
   background-image: none;
   border-radius: var(--di-radius);
   color: var(--di-ink);
-  font-weight: 700;
+  font-weight: 700 !important;
   text-shadow: none;
   box-shadow: none;
   --library-actionbutton-icon-hover-color: var(--di-ink);
@@ -401,13 +419,16 @@ html[data-theme-cover-lift="true"] .steam-LibraryItemBox:hover {
 
 :is(.steam-PlayBarLabel--Container, .steam-PlaySection)
   .steam-PlayButtonContainer:not(.steam-PlayButtonContainer--Disabled)
-  > .steam-PlayButtonContainer--ButtonChild :is(div, span, svg) {
+  > .steam-PlayButtonContainer--ButtonChild :is(div, span) {
   color: inherit;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em;
 }
 
 :is(.steam-PlayBarLabel--Container, .steam-PlaySection)
   .steam-PlayButtonContainer:not(.steam-PlayButtonContainer--Disabled)
   > .steam-PlayButtonContainer--ButtonChild :is(svg, svg path, svg polygon) {
+  color: inherit;
   fill: currentColor;
 }
 
@@ -419,6 +440,7 @@ html[data-theme-cover-lift="true"] .steam-LibraryItemBox:hover {
 
 .steam-PlayBarLabel--Container .steam-PlayBarLabel--AchievementProgressRow .steam-PlayBarLabel--DetailsProgressBar {
   background: var(--di-accent);
+  border-radius: 999px;
 }
 
 .steam-AppDetailsSection--Highlight .steam-UnlockedLabel + div {
