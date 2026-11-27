@@ -1,8 +1,334 @@
-:is(html.ModalDialogPopup > body.fullheight.ModalDialogBody, .TimelineAndControls, .steam-PlayerAndTimeline--TimelineAndControls) {
+body {
+  font-family: var(--di-font-body);
+  color: var(--di-text);
+}
+
+.steam-KeyboardCapture--Wrapper {
+  background: color-mix(in srgb, var(--di-frame) 78%, transparent);
+  box-shadow: none;
+}
+
+:is(.steam-BreakNarrow--BackToGameBtn, .steam-KeyboardCapture--BackToGameBtn),
+:is(.steam-BreakNarrow--ToolbarButton, .steam-KeyboardCapture--ToolbarButton),
+:is(.steam-BreakNarrow--ViewPlayersBtn, .steam-KeyboardCapture--ViewPlayersBtn) {
+  background-color: var(--di-raised);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-radius);
+  box-shadow: none;
+  color: var(--di-text);
+  transition: background-color 0.14s ease, border-color 0.14s ease, color 0.14s ease;
+}
+
+:is(.steam-BreakNarrow--BackToGameBtn, .steam-KeyboardCapture--BackToGameBtn):hover,
+:is(.steam-BreakNarrow--ToolbarButton, .steam-KeyboardCapture--ToolbarButton):hover,
+:is(.steam-BreakNarrow--ViewPlayersBtn, .steam-KeyboardCapture--ViewPlayersBtn):hover {
+  background-color: var(--di-hover);
+  border-color: var(--di-line-strong);
+}
+
+:is(.steam-BreakNarrow--ToolbarButton, .steam-KeyboardCapture--ToolbarButton):is(.steam-BreakNarrow--Toggled, .steam-KeyboardCapture--Toggled) {
+  background-color: var(--di-accent);
+  border-color: transparent;
+  color: var(--di-ink);
+}
+
+:is(.steam-BreakNarrow--ToolbarButton, .steam-KeyboardCapture--ToolbarButton):is(.steam-BreakNarrow--Toggled, .steam-KeyboardCapture--Toggled):hover {
+  background-color: var(--di-accent-hover);
+}
+
+:is(.steam-BreakNarrow--ToolbarToolTip, .steam-KeyboardCapture--ToolbarToolTip) {
+  color: var(--di-text);
+  font-family: var(--di-font-body);
+}
+
+:is(.steam-BreakNarrow--ExitGameBtn, .steam-KeyboardCapture--ExitGameBtn) {
+  background-color: var(--di-raised);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-radius);
+  color: var(--di-text);
+  filter: none;
+}
+
+:is(.steam-BreakNarrow--ExitGameBtn, .steam-KeyboardCapture--ExitGameBtn):hover {
+  background-color: var(--di-danger);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+:is(.steam-KeyboardCapture--GameName, .steam-BreakNarrow--CurrentTime, .steam-KeyboardCapture--CurrentTime) {
+  color: var(--di-text);
+  font-family: var(--di-font-display);
+  font-weight: 700;
+}
+
+:is(.steam-KeyboardCapture--KBShortcut, .steam-KeyboardCapture--CurrentDate,
+  .steam-BreakNarrow--PlaytimeCurrentSession, .steam-KeyboardCapture--PlaytimeCurrentSession,
+  .steam-KeyboardCapture--NetworkStatus) {
+  color: var(--di-text-muted);
+  font-family: var(--di-font-body);
+}
+
+:is(.steam-BreakNarrow--OverlayPopup, .steam-KeyboardCapture--OverlayPopup) {
+  background: var(--di-bg);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-card-radius);
+  box-shadow: none;
+  overflow: hidden;
+}
+
+:is(.steam-BreakNarrow--OverlayPopup, .steam-KeyboardCapture--OverlayPopup) .title-area-children {
+  color: var(--di-text-muted);
+  font-family: var(--di-font-body);
+}
+
+:is(.steam-BreakNarrow--OverlayPopup, .steam-KeyboardCapture--OverlayPopup)
+  :is(.steam-BreakNarrow--PinWindowButton, .steam-KeyboardCapture--PinWindowButton,
+  .steam-BreakNarrow--FlipWindowButton, .steam-KeyboardCapture--FlipWindowButton,
+  .steam-BreakNarrow--CloudSyncButton, .steam-KeyboardCapture--CloudSyncButton,
+  .steam-BreakNarrow--OpacityButton, .steam-KeyboardCapture--OpacityButton) {
+  color: var(--di-text-muted);
+}
+
+:is(.steam-BreakNarrow--OverlayPopup, .steam-KeyboardCapture--OverlayPopup)
+  :is(.steam-BreakNarrow--PinWindowButton, .steam-KeyboardCapture--PinWindowButton,
+  .steam-BreakNarrow--FlipWindowButton, .steam-KeyboardCapture--FlipWindowButton,
+  .steam-BreakNarrow--CloudSyncButton, .steam-KeyboardCapture--CloudSyncButton,
+  .steam-BreakNarrow--OpacityButton, .steam-KeyboardCapture--OpacityButton):hover {
+  color: var(--di-text);
+}
+
+:is(.steam-BreakNarrow--OverlayPopup, .steam-KeyboardCapture--OverlayPopup)
+  :is(.steam-BreakNarrow--PinWindowButton, .steam-KeyboardCapture--PinWindowButton):is(.steam-BreakNarrow--Pinned, .steam-KeyboardCapture--Pinned),
+:is(.steam-BreakNarrow--OverlayPopup, .steam-KeyboardCapture--OverlayPopup)
+  :is(.steam-BreakNarrow--FlipWindowButton, .steam-KeyboardCapture--FlipWindowButton):is(.steam-BreakNarrow--Flipped, .steam-KeyboardCapture--Flipped) {
+  color: var(--di-accent);
+}
+
+:is(.steam-BreakNarrow--OverlayPopup, .steam-KeyboardCapture--OverlayPopup) .steam-KeyboardCapture--BrowserViewHost {
+  background: var(--di-bg);
+  border: 0;
+}
+
+:is(.steam-BreakNarrow--GameOverview, .steam-KeyboardCapture--GameOverview) {
+  background: var(--di-bg);
+}
+
+:is(.steam-BreakNarrow--OverviewTitle, .steam-KeyboardCapture--OverviewTitle) {
+  color: var(--di-text);
+  font-family: var(--di-font-display);
+  letter-spacing: -0.02em;
+}
+
+:is(.steam-BreakNarrow--GameOverviewSection, .steam-KeyboardCapture--GameOverviewSection):is(.steam-BreakNarrow--HasBackground, .steam-KeyboardCapture--HasBackground),
+:is(.steam-BreakNarrow--IsDragging, .steam-KeyboardCapture--IsDragging) :is(.steam-BreakNarrow--GameOverviewSectionHeader, .steam-KeyboardCapture--GameOverviewSectionHeader) {
+  background-color: var(--di-card);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-card-radius);
+}
+
+:is(.steam-BreakNarrow--GameOverviewSectionHeader, .steam-KeyboardCapture--GameOverviewSectionHeader) {
+  color: var(--di-text-muted);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+:is(.steam-BreakNarrow--RecentAchievement, .steam-KeyboardCapture--RecentAchievement),
+:is(.steam-BreakNarrow--GuideListItem, .steam-KeyboardCapture--GuideListItem),
+:is(.steam-BreakNarrow--RecentNewsItem, .steam-KeyboardCapture--RecentNewsItem) {
+  background-color: var(--di-card);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-radius);
+  color: var(--di-text-muted);
+  transition: background-color 0.14s ease, border-color 0.14s ease, color 0.14s ease;
+}
+
+:is(.steam-BreakNarrow--RecentAchievement, .steam-KeyboardCapture--RecentAchievement):hover,
+:is(.steam-BreakNarrow--GuideListItem, .steam-KeyboardCapture--GuideListItem):hover,
+:is(.steam-BreakNarrow--RecentNewsItem, .steam-KeyboardCapture--RecentNewsItem):hover {
+  background-color: var(--di-hover);
+  border-color: var(--di-line-strong);
+  color: var(--di-text);
+}
+
+:is(.steam-BreakNarrow--AchievementTitle, .steam-KeyboardCapture--AchievementTitle) {
+  color: var(--di-text);
+}
+
+:is(.steam-BreakNarrow--AchievementDescription, .steam-KeyboardCapture--AchievementDescription) {
+  color: var(--di-text-muted);
+}
+
+:is(.steam-BreakNarrow--Screenshot, .steam-KeyboardCapture--Screenshot) img {
+  border-radius: var(--di-cover-radius);
+}
+
+:is(.steam-BreakNarrow--Screenshot, .steam-KeyboardCapture--Screenshot) img:hover {
+  border-color: var(--di-accent);
+}
+
+:is(.steam-BreakNarrow--OverlayBroadcast, .steam-KeyboardCapture--OverlayBroadcast) .steam-KeyboardCapture--Title {
+  color: var(--di-accent);
+}
+
+.steam-KeyboardCapture--TimelineHintContainer .steam-KeyboardCapture--Content,
+:is(.steam-BreakNarrow--TimelineHintContainer, .steam-KeyboardCapture--TimelineHintContainer) :is(.steam-BreakNarrow--Triangle, .steam-KeyboardCapture--Triangle) {
+  background-color: var(--di-card);
+  border-radius: var(--di-card-radius);
+}
+
+:is(.steam-BreakNarrow--Triangle, .steam-KeyboardCapture--Triangle) {
+  border-radius: 2px;
+}
+
+:is(.steam-BreakNarrow--NewBadge, .steam-KeyboardCapture--NewBadge) {
+  color: var(--di-accent);
+}
+
+:is(.steam-BreakNarrow--ToolbarButtonHintTitle, .steam-KeyboardCapture--ToolbarButtonHintTitle) {
+  color: var(--di-text);
+  font-family: var(--di-font-display);
+}
+
+:is(.steam-BreakNarrow--SettingsModalRoot, .steam-KeyboardCapture--SettingsModalRoot) {
+  background: var(--di-bg);
+  color: var(--di-text);
+}
+
+:is(.steam-BreakNarrow--SettingsTitleBar, .steam-KeyboardCapture--SettingsTitleBar) {
+  background: var(--di-frame);
+  border-bottom: 1px solid var(--di-line);
+}
+
+:is(html.ModalDialogPopup > body.fullheight.ModalDialogBody, .steam-PlayerAndTimeline--TimelineAndControls, .steam-KeyboardCapture--TimelineAndControls) {
   background: var(--di-card);
   border: 1px solid var(--di-line);
   border-radius: var(--di-card-radius);
   box-shadow: none;
+}
+
+.steam-KeyboardCapture--TimelineAndControls .steam-KeyboardCapture--Timeline {
+  background: var(--di-card);
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+.steam-KeyboardCapture--TimelineAndControls .steam-KeyboardCapture--SettingIcon {
+  color: var(--di-text-muted);
+}
+
+.steam-KeyboardCapture--TimelineAndControls .steam-KeyboardCapture--SettingIcon:hover {
+  color: var(--di-text);
+}
+
+:is(.steam-KeyboardCapture--ShowVideoButton, .steam-ViewClipsButton, .steam-RecordingIconsAndState) {
+  background-color: var(--di-raised);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-radius);
+  backdrop-filter: none;
+  box-shadow: none;
+  color: var(--di-text);
+}
+
+:is(.steam-KeyboardCapture--ShowVideoButton, .steam-ViewClipsButton):hover {
+  background-color: var(--di-hover);
+  border-color: var(--di-line-strong);
+}
+
+.steam-RecordingIconsAndState.steam-KeyboardCapture--BackgroundRecording {
+  border-top: 2px solid var(--di-accent);
+}
+
+.steam-OverlayClock {
+  color: var(--di-text);
+  font-family: var(--di-font-body);
+}
+
+.steam-TabClock .steam-OverlayClock--CurrentTime {
+  color: var(--di-text);
+  font-family: var(--di-font-display);
+}
+
+.steam-TabTimer .steam-OverlayClock--Remaining {
+  color: var(--di-text);
+}
+
+.steam-TabTimer .steam-TimePart {
+  background-color: var(--di-card);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-radius);
+}
+
+.steam-TabTimer :is(.steam-Repeat, .steam-OverlayClock--Clear, .steam-OverlayClock--Reset) {
+  color: var(--di-text-muted);
+}
+
+.steam-TabTimer :is(.steam-Repeat, .steam-OverlayClock--Clear, .steam-OverlayClock--Reset).steam-OverlayClock--Active {
+  background-color: var(--di-accent);
+  color: var(--di-ink);
+}
+
+.steam-GuideList {
+  background-color: var(--di-bg);
+  gap: 8px;
+}
+
+.steam-OverlayGuidesHome--ListTitle,
+.steam-OverlayGuidesHome--GuideTitle {
+  color: var(--di-text);
+}
+
+.steam-GuideListItemBase {
+  background-color: var(--di-card);
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-card-radius);
+  overflow: hidden;
+}
+
+.steam-GuideListItemBase .steam-OverlayGuidesHome--Footer {
+  background-color: var(--di-raised);
+}
+
+.steam-GuideDetailsHeader {
+  border-bottom: 1px solid var(--di-line);
+}
+
+.steam-SubSectionTitle {
+  color: var(--di-accent);
+}
+
+.steam-TableOfContents {
+  border-left: 1px solid var(--di-line);
+}
+
+.steam-OverlayPlayersDialog--PlayersList {
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-card-radius);
+  box-shadow: none;
+}
+
+.steam-PlayersListBody {
+  background: var(--di-card);
+}
+
+.steam-PlayersListHeaderCtr {
+  background: var(--di-frame);
+  border-bottom: 1px solid var(--di-line);
+}
+
+.steam-OverlayPlayersDialog--ColumnResizer {
+  background: var(--di-line);
+  border-right-color: var(--di-line);
+}
+
+.steam-OverlayBrowserContainer.steam-OverlayBrowserContainer--Inset {
+  background-color: color-mix(in srgb, var(--di-frame) 70%, transparent);
+}
+
+.steam-OverlayBrowserContainer--BrowserWrapper.steam-OverlayBrowserContainer--Inset {
+  border: 1px solid var(--di-line);
+  border-radius: var(--di-card-radius);
+  box-shadow: none;
+  overflow: hidden;
 }
 
 .steam-OverlayScreenshotManagerContainer {

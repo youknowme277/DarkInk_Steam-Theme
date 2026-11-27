@@ -184,7 +184,7 @@ html[data-theme-density="roomy"] .steam-SuperNav { font-size: 17px; }
 .steam-HomeBox .steam-CollectionIconBox--Bar.steam-CollectionIconBox--Selected {
   background-color: var(--di-edge-bg);
   border-color: var(--di-edge-border);
-  box-shadow: inset 3px 0 0 var(--di-accent);
+  box-shadow: inset var(--di-rail) 0 0 var(--di-accent);
   color: var(--di-text);
 }
 
@@ -235,7 +235,7 @@ html:not([data-theme-accent-style="solid"]) .steam-GameListEntryContainer--Selec
 html:not([data-theme-accent-style="solid"]) .steam-GameListEntryContainer--Selected.steam-GameListEntryContainer--Container {
   background-color: var(--di-edge-bg) !important;
   border-radius: var(--di-radius);
-  box-shadow: inset 3px 0 0 var(--di-accent);
+  box-shadow: inset var(--di-rail) 0 0 var(--di-accent);
   color: var(--di-text) !important;
   font-weight: 600;
 }
@@ -481,8 +481,8 @@ html[data-theme-cover-lift="true"] .steam-LibraryItemBox:hover {
   box-shadow: none;
 }
 
-.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event .steam-AppActivityDay--EventBody,
-.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event.steam-PartnerEventTextOnly,
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-AppActivityDay--Event .steam-AppActivityDay--EventBody,
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-AppActivityDay--Event.steam-PartnerEventTextOnly,
 .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-PartnerEventMediumImage_Container,
 .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-PartnerEventLargeImage_Container {
   background: var(--di-card);
@@ -493,14 +493,14 @@ html[data-theme-cover-lift="true"] .steam-LibraryItemBox:hover {
   overflow: hidden;
 }
 
-.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event.steam-PartnerEventTextOnly:hover,
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-AppActivityDay--Event.steam-PartnerEventTextOnly:hover,
 .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-PartnerEventMediumImage_Container:hover,
 .steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-PartnerEventLargeImage_Container:hover {
   background: var(--di-hover);
   border-color: var(--di-line-strong);
 }
 
-.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event .steam-PartnerEventFeaturedHeader {
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-AppActivityDay--Event .steam-PartnerEventFeaturedHeader {
   background: var(--di-frame);
   background-image: none;
   color: var(--di-accent);
@@ -511,7 +511,7 @@ html[data-theme-cover-lift="true"] .steam-LibraryItemBox:hover {
   font-size: 11px;
 }
 
-.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event:has(.steam-PartnerEventFeaturedHeader):not(:has(> .steam-PartnerEventFeaturedHeader)) {
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-AppActivityDay--Event:has(.steam-PartnerEventFeaturedHeader):not(:has(> .steam-PartnerEventFeaturedHeader)) {
   background: var(--di-card);
   background-image: none;
   border: 1px solid var(--di-line);
@@ -522,7 +522,7 @@ html[data-theme-cover-lift="true"] .steam-LibraryItemBox:hover {
   overflow: hidden;
 }
 
-.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event:has(> .steam-PartnerEventFeaturedHeader) {
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-AppActivityDay--Event:has(> .steam-PartnerEventFeaturedHeader) {
   background: transparent;
   border: 0;
   border-image: none;
@@ -530,7 +530,7 @@ html[data-theme-cover-lift="true"] .steam-LibraryItemBox:hover {
   box-shadow: none;
 }
 
-.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event:has(.steam-PartnerEventFeaturedHeader)
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-AppActivityDay--Event:has(.steam-PartnerEventFeaturedHeader)
   :is(.steam-PartnerEventMediumImage_Container, .steam-PartnerEventLargeImage_Container) {
   border: 0;
   border-radius: 0;
@@ -538,7 +538,7 @@ html[data-theme-cover-lift="true"] .steam-LibraryItemBox:hover {
   background-image: none;
 }
 
-.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-Event:has(.steam-PartnerEventFeaturedHeader)
+.steam-LeftListMaxPercentage--AppDetailsTransitionGroup .steam-AppActivityDay--Event:has(.steam-PartnerEventFeaturedHeader)
   :is(.steam-PartnerEventMediumImage_Image, .steam-PartnerEventLargeImage_Image) {
   border-radius: var(--di-cover-radius);
 }
@@ -662,7 +662,7 @@ html[data-theme-cover-lift="true"] .steam-LibraryItemBox:hover {
 
 .steam-DownloadsPage--SectionItemWrapper.gpfocus .steam-SectionItem.steam-DownloadsPage--Active {
   background: var(--di-edge-bg);
-  box-shadow: inset 3px 0 0 var(--di-accent);
+  box-shadow: inset var(--di-rail) 0 0 var(--di-accent);
 }
 
 .steam-SectionItemStatus .steam-DownloadsPage--ProgressBar {

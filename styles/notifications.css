@@ -5,7 +5,7 @@
 .steam-DesktopToastPopup {
   background: var(--di-card);
   border: 1px solid var(--di-line);
-  border-left: 3px solid var(--di-accent);
+  border-left: var(--di-rail) solid var(--di-accent);
   border-radius: var(--di-card-radius);
   box-shadow: none;
   font-family: var(--di-font-body);

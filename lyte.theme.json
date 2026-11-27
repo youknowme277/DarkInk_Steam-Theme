@@ -6,7 +6,7 @@
     { "window": "main", "file": "styles/main.css" },
     { "window": "settings", "file": "styles/settings.css" },
     { "window": "friends", "file": "styles/friends.css" },
-    { "window": "overlay", "file": "styles/overlay.css" },
+    { "window": "overlay", "files": ["styles/desktop.css", "styles/menus.css", "styles/friends.css", "styles/overlay.css"] },
     { "window": "menus", "file": "styles/menus.css" },
     { "window": "notifications", "file": "styles/notifications.css" },
     { "window": "dialogs", "file": "styles/dialogs.css" },
@@ -111,7 +111,7 @@
       "label": "Muted text",
       "description": "Secondary labels, inactive tabs and metadata.",
       "group": "Colors",
-      "default": "#94a3b8"
+      "default": "#a6b0bd"
     },
     {
       "id": "ingame",

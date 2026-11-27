@@ -103,5 +103,5 @@ button.DialogButton:is(.Primary, .GreenPlay):disabled {
 
 .steam-AddNonSteamGameDialogContent .steam-AddNonSteamGameDialog--GameRow:has(input:checked) {
   background-color: var(--di-tint-soft);
-  box-shadow: inset 2px 0 0 var(--di-accent);
+  box-shadow: inset var(--di-rail) 0 0 var(--di-accent);
 }

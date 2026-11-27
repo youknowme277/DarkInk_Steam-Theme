@@ -8,7 +8,7 @@ A clean, unified flat obsidian-dark Steam client theme in the **DarkInk** visual
 
 - **Official DarkInk Branding:** Top-left Steam menu replaced with the DarkInk inkwell avatar and two-tone **Dark**`Ink` wordmark (`#ffffff` + `#00bfcf`).
 - **Native Ergonomics, Zero Layout Bugs:** Keep Steam's draggable Library sidebar (configurable max width up to `520px`), full-width top navigation (`Store`, `Library`, `Community`, `Profile`), and classic bottom bar (*Add Game* left · *Downloads* center · *Friends & Chat* right).
-- **100% Unified DarkInk Obsidian:** Strips Valve's blue gradients across Desktop, Store, Community, Support/Web, Friends, Settings (including LYTE Settings), Menus, Notifications, Dialogs, and Overlay.
+- **100% Unified DarkInk Obsidian:** Strips Valve's blue gradients across Desktop, Store, Community, Support/Web, Friends, Settings (including LYTE Settings), Menus, Notifications, Dialogs, and the in-game Overlay (toolbar, game overview, overlay windows, guides, clock, player list, recording timeline, friends and chat).
 - **2 Active Highlight Styles:** Choose **DarkInk Tinted Edge** (obsidian-cyan tint + `3px` left accent bar) or **Solid Accent Pill**.
 - **4 Color Presets:** *DarkInk Classic*, *DarkInk Abyss (OLED)*, *DarkInk Violet*, and *DarkInk Crimson*.
 - **22 Live Options & 100% Local:** Zero external `@import` rules and zero remote assets.

@@ -3,7 +3,7 @@
   "type": "theme",
   "name": "DarkInk",
   "description": "Unified flat obsidian Steam theme with official DarkInk branding, cyan accents, resizable sidebar, 4 presets, and full 12-window coverage.",
-  "version": "1.02",
+  "version": "1.03",
   "license": "MIT",
   "preview": "assets/preview.png",
   "tags": ["dark", "cyan", "flat", "modern", "minimal"]

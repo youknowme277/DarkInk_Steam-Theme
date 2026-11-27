@@ -39,7 +39,7 @@ body.v6,
 .tab_item.focus,
 .search_result_row:hover {
   background: var(--di-hover) !important;
-  box-shadow: inset 3px 0 0 var(--di-accent);
+  box-shadow: inset var(--di-rail) 0 0 var(--di-accent);
 }
 
 .discount_pct {

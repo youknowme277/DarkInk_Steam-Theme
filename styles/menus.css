@@ -43,7 +43,7 @@ html.steam-ContextMenuPopup .steam-ContextMenuMouseOverlay--contextMenuContents,
 :root :is(.steam-ContextMenuMouseOverlay--active, .steam-BasicContextMenuModal--active,
   .steam-BasicContextMenuModal--Selected, .steam-DialogDropDownMenu_Item[aria-selected="true"]) {
   background: var(--di-tint-soft);
-  box-shadow: inset 2px 0 0 var(--di-accent);
+  box-shadow: inset var(--di-rail) 0 0 var(--di-accent);
   color: var(--di-text);
 }
 
